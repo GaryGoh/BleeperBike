@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BleeperBike</title>
+  <!-- Start of bleeperbike Zendesk Widget script -->
+  <script>/*<![CDATA[*/
+  window.zEmbed || function (e, t) {
+      var n, o, d, i, s, a = [], r = document.createElement("iframe");
+      window.zEmbed = function () {
+          a.push(arguments)
+      }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+      try {
+          o = s
+      } catch (e) {
+          n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s
+      }
+      o.open()._l = function () {
+          var e = this.createElement("script");
+          n && (this.domain = n), e.id = "js-iframe-async", e.src = "https://assets.zendesk.com/embeddable_framework/main.js", this.t = +new Date, this.zendeskHost = "bleeperbike.zendesk.com", this.zEQueue = a, this.body.appendChild(e)
+      }, o.write('<body onload="document._l();">'), o.close()
+  }();
+  /*]]>*/</script>
+  <!-- End of bleeperbike Zendesk Widget script -->
+  <script>
+      (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function () {
+                      (i[r].q = i[r].q || []).push(arguments)
+                  }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+                  m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-98871284-1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+<div id="container">
+
+  <!--header-nav-->
+  <div class="header_wrap">
+    <div class="header">
+      <!--<div class="logo"><img src="__PUBLIC__/home/img/web/logo.png" alt=""></div>-->
+      <div class="logo"><%= image_tag('img/web/logo.png') %></div>
+      <div class="nav_ul">
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#works">How&nbspit&nbspWorks</a></li>
+          <li><a href="#rules">Parking&nbsprules</a></li>
+          <li><a href="#price">Price</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--top_background-img-->
+  <div class="header_bg" id="top">
+    <%= image_tag('img/web/banner.png') %>
+    <div class="circle sr-slogan">
+      <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
+    </div>
+  </div>
+  <div class="main">
+    <!--phoneloop-->
+    <div class="banner">
+      <div class="banner_title" id="works">
+        <h3>HOW&nbspIT&nbspWORKS</h3>
+
+        <p>Download the BleeperBike App onto your smart phone</p>
+      </div>
+      <div class="banner_loop">
+        <div class="loop">
+          <div class="loop_box">
+            <ul class="slidebox">
+              <li><%= image_tag('img/web/register.png') %></li>
+              <li><%= image_tag('img/web/find.png') %></li>
+              <li><%= image_tag('img/web/unlock.png') %></li>
+              <li><%= image_tag('img/web/ride.png') %></li>
+              <li><%= image_tag('img/web/lock.png') %></li>
+              <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/register.png" alt=""></li>-->
+              <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/find.png" alt=""></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="loop_btn">
+        <div class="item">
+          <em class="line"></em>
+
+          <div class="loop_bg bg01"></div>
+          <h3>REGISTER</h3>
+
+          <p>
+            Register by <br>
+            email or phone<br>
+            verification
+          </p>
+        </div>
+        <div class="item">
+          <em class="line"></em>
+
+          <div class="loop_bg bg02"></div>
+          <h3>FIND</h3>
+
+          <p>
+            When you open the <br>
+            app all bikes near you <br>
+            will be displayed <br>
+          </p>
+        </div>
+        <div class="item">
+          <em class="line"></em>
+
+          <div class="loop_bg bg03"></div>
+          <h3>UNLOCK</h3>
+
+          <p>
+            Scan the QR <br>
+            Code or enter <br>
+            the BleeperBike ID <br>
+            No.
+          </p>
+        </div>
+        <div class="item">
+          <em class="line"></em>
+
+          <div class="loop_bg bg04"></div>
+          <h3>RIDE</h3>
+
+          <p>
+            Enjoy you ride <br>
+            AND always obey <br>
+            the rules of the road <br>
+          </p>
+        </div>
+        <div class="item">
+          <!--<em class="line"></em>-->
+          <div class="loop_bg bg05"></div>
+          <h3>LOCK</h3>
+
+          <p>
+            Push Smart lock <br>
+            lever to lock <br>
+            Bleeper. <br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Single button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Action <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>
+
+    <!--bleeperbike-->
+    <div class="bleeper" id="meet">
+      <div class="bleeper_box">
+        <div class="bleeper_mt">
+          <h3>MEET BLEEPER</h3>
+
+          <p>BleeperBike is comfortable and fun to ride</p>
+        </div>
+        <div class="bleeper_bike">
+          <%= image_tag('img/web/bike.png') %>
+          <ul class="lineBox">
+            <li class="led">
+              <p>Built in LED light</p>
+
+              <div class="led_cover">
+                <div></div>
+                <div class="led_line cover"></div>
+              </div>
+            </li>
+            <li class="brake">
+              <p>Responsive brake</p>
+
+              <div class="brake_cover">
+                <div></div>
+                <div class="brake_line cover"></div>
+              </div>
+            </li>
+            <li class="hub">
+              <p>Power generation hub</p>
+
+              <div class="hub_cover">
+                <div></div>
+                <div class="hub_line cover"></div>
+              </div>
+            </li>
+            <li class="seat">
+              <p>Adjustable seat</p>
+
+              <div class="seat_cover">
+                <div></div>
+                <div class="seat_line cover"></div>
+              </div>
+            </li>
+            <li class="gps">
+              <p>Smart lock with built in GPS</p>
+
+              <div class="gps_cover">
+                <div></div>
+                <div class="gps_line cover"></div>
+              </div>
+            </li>
+            <li class="built">
+              <p>Built in LED lights</p>
+
+              <div class="built_cover">
+                <div></div>
+                <div class="built_line cover"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!--parking_rules-->
+    <div class="parkingRules" id="rules">
+      <div class="parking_wrap">
+        <div class="rule_desc">
+          <h3>PARKING RULES</h3>
+
+          <p>Please only park Bleeper at designated parking locations</p>
+          <%= image_tag('img/web/parking.png') %>
+
+        </div>
+        <div class="rule_morality">
+          <p>It is essential that BleeperBikers <br>
+            respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
+        </div>
+        <div class="rule_img">
+          <%= image_tag('img/web/rule_img.png') %>
+        </div>
+        <!--<div class="rule_morality">
+            <p>It is essential that BleeperBikers <br>
+                respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
+        </div> -->
+      </div>
+      <div class="rule_design">
+        <%= image_tag('img/web/rule_design.png') %>
+      </div>
+    </div>
+    <!--price-->
+    <div class="price" id="price">
+      <!--<div class="price_mtline">-->
+      <!--<img src="" alt="">-->
+      <!--</div>-->
+      <h3>PRICE</h3>
+
+      <div class="price_fee">
+        <div class="price_fee_wrap">
+          <div class="price_fee_box">
+            <foreach name="billing_data" item="vo" key="k">
+              <p><{$vo.billing_plan_details}></p>
+              <if condition="($k+1) neq count($billing_data)">
+                <p>or </p>
+              </if>
+            </foreach>
+          </div>
+        </div>
+      </div>
+      <div class="price_credit">
+        <div class="price_credit_wrap">
+          <div class="credit_l">
+            <div class="credit_wrap">
+              <div style="overflow: hidden">
+                <p style="height:30px;">Gain Points</p>
+
+                <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
+              </div>
+              <div style="height:280px;overflow-y:scroll" class="scroll">
+                <ul>
+                  <foreach name="gaincredit" item="vo">
+                    <li>
+                      <span class="credit_desc"><{$vo.content}></span>
+                      <span class="credit_count"><{$vo.credit_point}></span>
+                    </li>
+                  </foreach>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="credit_r">
+            <div class="credit_wrap">
+              <div style="overflow: hidden">
+                <p style="height:30px">Lose Points</p>
+
+                <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
+              </div>
+              <div style="height:280px;overflow-y:scroll">
+                <ul>
+                  <foreach name="losecredit" item="vo">
+                    <li>
+                      <span class="credit_descr"><{$vo.content}></span>
+                      <span class="credit_countr"><{$vo.credit_point}></span>
+                    </li>
+                  </foreach>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--download-->
+    <div class="download" id="download">
+      <h3>DOWNLOAD</h3>
+
+      <div class="download_bg"></div>
+      <div class="down_bgimg">
+        <a href="" class="iphone">
+          <!--<img src="__PUBLIC__/home/img/web/download.png" alt="">-->
+        </a>
+        <a href="" class="android">
+          <!--<img src="__PUBLIC__/home/img/web/download.png" alt="">-->
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer_wrap">
+      <div>
+        <ul>
+          <li class="col-lg-4 col-md-12">
+            <strong>LEGAL</strong>
+            <a data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</a>
+            <a data-toggle="modal" data-target="#privacy">Privacy&nbspPolicy</a>
+          </li>
+          <li class=" col-lg-4 col-md-12 paddingtop-bottom">
+            <strong>USEFUL&nbspLINKS</strong>
+            <a data-toggle="modal" data-target="#faq">FAQ</a>
+          </li>
+          <li class=" col-lg-4 col-md-12 paddingtop-bottom ">
+            <strong>APPS</strong>
+            <a href="###">Download&nbspIOS&nbspapp</a>
+            <a href="###">Download&nbspAndroid&nbspapp</a>
+          </li>
+        </ul>
+      </div>
+      <div style="padding-bottom: 10%;">
+        <p class="col-lg-12"><{$copyright.copyright_context}></p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<%= render 'static_page/modal/privacy' %>
+<%= render 'static_page/modal/termsconditions' %>
+<%= render 'static_page/modal/faq' %>
+
+
+
+<!--<script src="__PUBLIC__/home/js/jquery-1.7.1.min.js"></script>-->
+<!--<script src="__PUBLIC__/home/js/swiper-3.3.1.jquery.min.js"></script>-->
+<!--<script src="__PUBLIC__/home/js/slide.js"></script>-->
+<!--<script src="__PUBLIC__/home/js/scrollreveal.min.js"></script>-->
+<%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js' %>
+<%= javascript_include_tag 'custom/slide.js' %>
+<%= javascript_include_tag 'custom/scrollreveal.min.js' %>
+
+<script>
+    $(document).ready(function () {
+        var height = $('.scroll').height();
+        console.log(height)
+        if (height > 280) {
+            $('.scroll').addClass('.overflow_hidden')
+        }
+        window.onscroll = function () {
+            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+//            console.log(scrollTop);
+            if (scrollTop >= 1950) {
+                $('.lineBox>li>p').show(100);
+                $('.led_cover').show(700);
+                $('.brake_cover').show(700);
+                $('.hub_cover').show(700);
+                $('.seat_cover').show(700);
+                $('.gps_cover').show(700);
+                $('.built_cover').show(700);
+            } else if (scrollTop <= 1250 || scrollTop >= 2650) {
+                $('.lineBox>li>p').hide(100);
+                $('.led_cover').hide(700);
+                $('.brake_cover').hide(700);
+                $('.hub_cover').hide(700);
+                $('.seat_cover').hide(700);
+                $('.gps_cover').hide(700);
+                $('.built_cover').hide(700);
+            }
+        };
+        window.sr = ScrollReveal();
+        sr.reveal('.sr-slogan', {
+            origin: 'top',
+            duration: 500,
+            scale: 1.1,
+            mobile: true,
+        }, 300);
+        //faq
+        $('#FAQ').click(function () {
+            $('.zezao').show();
+            $('.faq').show();
+        });
+        $('.close').click(function () {
+            $('.zezao').hide();
+            $('.faq').hide();
+        });
+        $('#TERM').click(function () {
+            $('.zezao').show();
+            $('.term').show();
+        });
+        $('.close1').click(function () {
+            $('.zezao').hide();
+            $('.term').hide();
+        });
+        $('#POLICY').click(function () {
+            $('.zezao').show();
+            $('.policy').show();
+        });
+        $('.close2').click(function () {
+            $('.zezao').hide();
+            $('.policy').hide();
+        });
+        setTimeout(function () {
+            $('.circle').show(700);
+        }, 800);
+        $('.zezao').click(function () {
+            $('.zezao').hide();
+            $('.term').hide();
+            $('.faq').hide();
+            $('.policy').hide();
+        });
+
+    })
+    var navbar = document.getElementsByClassName('navbar');
+    var Goindex = document.getElementsByClassName('Goindex');
+    for (var i = 0; i < navbar.length; i++) {
+//				var index = hover[i];
+        navbar[i].setAttribute("id", i);
+        var id = navbar[i].getAttribute("id");
+//				console.log(hover[i])
+        console.log(id);
+//
+    }
+    for (var i = 0; i < Goindex.length; i++) {
+//				var index = hover[i];
+        Goindex[i].setAttribute("href", '#' + i);
+        var index = Goindex[i].getAttribute("href");
+//				console.log(hover[i])
+        console.log(index);
+//
+    }
+</script>
+</body>
+</html>
