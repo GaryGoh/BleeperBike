@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'therubyracer'
 gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails'
+gem 'jquery-easing-rails'
 
 # admin
 gem 'activeadmin', github: 'activeadmin'

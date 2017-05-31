@@ -8,9 +8,11 @@ body,html{
 
 }
 .header_wrap{
-    position: fixed;
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*z-index: 9999;*/
     width: 100%;
-    z-index: 9999;
+    padding-top: 0.42%;
     background-color: #fff;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }

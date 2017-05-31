@@ -44,17 +44,17 @@
 <div id="container">
 
   <!--header-nav-->
-  <div class="header_wrap">
-    <div class="header">
+  <div class="header_wrap navbar navbar-default navbar-fixed-top">
+    <div class="container">
       <!--<div class="logo"><img src="__PUBLIC__/home/img/web/logo.png" alt=""></div>-->
-      <div class="logo"><%= image_tag('img/web/logo.png') %></div>
-      <div class="nav_ul">
-        <ul>
-          <li><a href="#top">Home</a></li>
-          <li><a href="#works">How&nbspit&nbspWorks</a></li>
-          <li><a href="#rules">Parking&nbsprules</a></li>
-          <li><a href="#price">Price</a></li>
-          <li><a href="#download">Download</a></li>
+      <div class="col-sm-6"><%= image_tag('img/web/logo.png') %></div>
+      <div class="col-sm-6">
+        <ul class="nav navbar-nav" id="navs">
+          <li><a href="#top" class="nav-link page-scroll">Home</a></li>
+          <li><a href="#works" class="nav-link page-scroll">How&nbspit&nbspWorks</a></li>
+          <li><a href="#rules" role="presentation">Parking&nbsprules</a></li>
+          <li><a href="#price" role="presentation">Price</a></li>
+          <li><a href="#download" role="presentation">Download</a></li>
         </ul>
       </div>
     </div>
@@ -152,19 +152,6 @@
           </p>
         </div>
       </div>
-    </div>
-    <!-- Single button -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Action <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-      </ul>
     </div>
 
     <!--bleeperbike-->
@@ -378,6 +365,12 @@
 <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
 
 <script>
+  $('#navs a').click(function(){
+      var index = $(this).attr('href');
+      $('body').animate({scrollTop: $(index).offset().top}, "slow");
+      return false;
+  });
+
     $(document).ready(function () {
         var height = $('.scroll').height();
         console.log(height)
