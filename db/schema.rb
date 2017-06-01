@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170601155758) do
+ActiveRecord::Schema.define(version: 20170601230130) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20170601155758) do
   end
 
   create_table "credit_types", force: :cascade do |t|
-    t.string "type"
+    t.string "credit_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20170601155758) do
     t.integer "credit_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "priority"
   end
 
   create_table "faqs", force: :cascade do |t|
