@@ -50,11 +50,11 @@
       <div class="col-sm-6"><%= image_tag('img/web/logo.png') %></div>
       <div class="col-sm-6">
         <ul class="nav navbar-nav" id="navs">
-          <li><a href="#top" class="nav-link page-scroll">Home</a></li>
-          <li><a href="#works" class="nav-link page-scroll">How&nbspit&nbspWorks</a></li>
-          <li><a href="#rules" role="presentation">Parking&nbsprules</a></li>
-          <li><a href="#price" role="presentation">Price</a></li>
-          <li><a href="#download" role="presentation">Download</a></li>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#works">How&nbspit&nbspWorks</a></li>
+          <li><a href="#rules">Parking&nbsprules</a></li>
+          <li><a href="#price">Price</a></li>
+          <li><a href="#download">Download</a></li>
         </ul>
       </div>
     </div>
@@ -67,10 +67,11 @@
       <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
     </div>
   </div>
+  <div id="works"></div>
   <div class="main">
     <!--phoneloop-->
     <div class="banner">
-      <div class="banner_title" id="works">
+      <div class="banner_title">
         <h3>HOW&nbspIT&nbspWORKS</h3>
 
         <p>Download the BleeperBike App onto your smart phone</p>
@@ -220,7 +221,8 @@
 
 
     <!--parking_rules-->
-    <div class="parkingRules" id="rules">
+    <div id="rules"></div>
+    <div class="parkingRules">
       <div class="parking_wrap">
         <div class="rule_desc">
           <h3>PARKING RULES</h3>
@@ -246,7 +248,8 @@
       </div>
     </div>
     <!--price-->
-    <div class="price" id="price">
+    <div id="price"></div>
+    <div class="price">
       <!--<div class="price_mtline">-->
       <!--<img src="" alt="">-->
       <!--</div>-->
@@ -367,7 +370,7 @@
 <script>
   $('#navs a').click(function(){
       var index = $(this).attr('href');
-      $('body').animate({scrollTop: $(index).offset().top}, "slow");
+      $('body, html').animate({scrollTop: $(index).offset().top}, "slow");
       return false;
   });
 
