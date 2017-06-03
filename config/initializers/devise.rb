@@ -7,6 +7,8 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   config.secret_key = ENV["DEVISE_SECRET_KEY"]
+  # config.secret_key = 'c22de65bca0b08eaab44654ce1f8a4b8de483fc3d150bb7dd26ecc04a8ac6bacb8a9321c4748b45f078345fb7a3d751ac185bd39e77243728a13b8b3e6ca840f'
+
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -217,7 +219,7 @@ Devise.setup do |config|
   # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).
   #
   # Require the `devise-encryptable` gem when using anything other than bcrypt
-  config.encryptor = :sha512
+  # config.encryptor = :sha512
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
