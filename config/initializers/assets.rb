@@ -10,7 +10,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( custom/swiper-3.3.1.jquery.min.js )
 Rails.application.config.assets.precompile += %w( custom/slide.js )
 Rails.application.config.assets.precompile += %w( custom/scrollreveal.min.js )
-
+Rails.application.config.assets.precompile << /\.(?:png|jpg|jpeg|gif)\z/
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets

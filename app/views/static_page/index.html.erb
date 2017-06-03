@@ -411,7 +411,7 @@
 <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
 
 <script>
-  $('#navs a').click(function(){
+  $('#bp-nav-trigger a').click(function(){
       var index = $(this).attr('href');
       $('body, html').animate({scrollTop: $(index).offset().top}, "slow");
       return false;

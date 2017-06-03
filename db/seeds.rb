@@ -10,7 +10,7 @@
 AdminUser.create!(email: 'hugh@bleeperbike.com', password: 'hugh2017', password_confirmation: 'hugh2017')
 AdminUser.create!(email: 'mgao@bleeperbike.com', password: 'gmq1990929', password_confirmation: 'gmq1990929')
 
-# Terms & Conditions
+# Copyright
 Copyright.create!(context: 'Copyright © 2016-2017 BleeperBike')
 
 # Credit Type
