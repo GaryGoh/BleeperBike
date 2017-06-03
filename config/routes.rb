@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   root to: 'static_page#index'
 
   get '/test', to: 'static_page#test'
+  get '/app', to: 'static_page#app'
+
 end

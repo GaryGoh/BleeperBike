@@ -46,10 +46,26 @@
   <!--header-nav-->
   <div class="header_wrap navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <!--<div class="logo"><img src="__PUBLIC__/home/img/web/logo.png" alt=""></div>-->
-      <div class="col-sm-6"><%= image_tag('img/web/logo.png') %></div>
+      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="col-sm-6">
-        <ul class="nav navbar-nav" id="navs">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/">
+          <% if mobile? %>
+              <%= image_tag('img/mobile/logo.png') %>
+          <% else %>
+              <%= image_tag('img/web/logo.png') %>
+          <% end %>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="col-sm-6 collapse navbar-collapse" id="bp-nav-trigger">
+        <ul class="nav navbar-nav">
           <li><a href="#top">Home</a></li>
           <li><a href="#works">How&nbspit&nbspWorks</a></li>
           <li><a href="#rules">Parking&nbsprules</a></li>
@@ -57,12 +73,18 @@
           <li><a href="#download">Download</a></li>
         </ul>
       </div>
+      <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container-->
   </div>
 
   <!--top_background-img-->
   <div class="header_bg" id="top">
-    <%= image_tag('img/web/banner.png') %>
+    <% if mobile? %>
+        <%= image_tag('img/mobile/banner.png') %>
+    <% else %>
+        <%= image_tag('img/web/banner.png') %>
+    <% end %>
     <div class="circle sr-slogan">
       <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
     </div>
@@ -80,11 +102,19 @@
         <div class="loop">
           <div class="loop_box">
             <ul class="slidebox">
-              <li><%= image_tag('img/web/register.png') %></li>
-              <li><%= image_tag('img/web/find.png') %></li>
-              <li><%= image_tag('img/web/unlock.png') %></li>
-              <li><%= image_tag('img/web/ride.png') %></li>
-              <li><%= image_tag('img/web/lock.png') %></li>
+              <% if mobile? %>
+                  <li><%= image_tag('img/mobile/register.png') %></li>
+                  <li><%= image_tag('img/mobile/find.png') %></li>
+                  <li><%= image_tag('img/mobile/unlock.png') %></li>
+                  <li><%= image_tag('img/mobile/ride.png') %></li>
+                  <li><%= image_tag('img/mobile/lock.png') %></li>
+              <% else %>
+                  <li><%= image_tag('img/web/register.png') %></li>
+                  <li><%= image_tag('img/web/find.png') %></li>
+                  <li><%= image_tag('img/web/unlock.png') %></li>
+                  <li><%= image_tag('img/web/ride.png') %></li>
+                  <li><%= image_tag('img/web/lock.png') %></li>
+              <% end %>
               <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/register.png" alt=""></li>-->
               <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/find.png" alt=""></li>-->
             </ul>
@@ -164,7 +194,11 @@
           <p>BleeperBike is comfortable and fun to ride</p>
         </div>
         <div class="bleeper_bike">
-          <%= image_tag('img/web/bike.png') %>
+          <% if mobile? %>
+              <%= image_tag('img/mobile/bike.png') %>
+          <% else %>
+              <%= image_tag('img/web/bike.png') %>
+          <% end %>
           <ul class="lineBox">
             <li class="led">
               <p>Built in LED light</p>
@@ -228,7 +262,11 @@
           <h3>PARKING RULES</h3>
 
           <p>Please only park Bleeper at designated parking locations</p>
-          <%= image_tag('img/web/parking.png') %>
+          <% if mobile? %>
+              <%= image_tag('img/mobile/parking.png') %>
+          <% else %>
+              <%= image_tag('img/web/parking.png') %>
+          <% end %>
 
         </div>
         <div class="rule_morality">
@@ -236,7 +274,11 @@
             respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
         </div>
         <div class="rule_img">
-          <%= image_tag('img/web/rule_img.png') %>
+          <% if mobile? %>
+              <%= image_tag('img/mobile/rule_img.png') %>
+          <% else %>
+              <%= image_tag('img/web/rule_img.png') %>
+          <% end %>
         </div>
         <!--<div class="rule_morality">
             <p>It is essential that BleeperBikers <br>
@@ -244,7 +286,11 @@
         </div> -->
       </div>
       <div class="rule_design">
-        <%= image_tag('img/web/rule_design.png') %>
+        <% if mobile? %>
+            <%= image_tag('img/mobile/rule_design.png') %>
+        <% else %>
+            <%= image_tag('img/web/rule_design.png') %>
+        <% end %>
       </div>
     </div>
     <!--price-->
@@ -258,12 +304,9 @@
       <div class="price_fee">
         <div class="price_fee_wrap">
           <div class="price_fee_box">
-            <foreach name="billing_data" item="vo" key="k">
-              <p><{$vo.billing_plan_details}></p>
-              <if condition="($k+1) neq count($billing_data)">
-                <p>or </p>
-              </if>
-            </foreach>
+            <% @payments.each do |payment|%>
+                  <p class=""><%= payment.clause%></p>
+            <%end%>
           </div>
         </div>
       </div>
@@ -278,12 +321,12 @@
               </div>
               <div style="height:280px;overflow-y:scroll" class="scroll">
                 <ul>
-                  <foreach name="gaincredit" item="vo">
-                    <li>
-                      <span class="credit_desc"><{$vo.content}></span>
-                      <span class="credit_count"><{$vo.credit_point}></span>
-                    </li>
-                  </foreach>
+                  <% @gain_credits.each do |gain|%>
+                      <li>
+                        <span class="credit_descr"><%= gain.clause%></span>
+                        <span class="credit_countr"><%= gain.point_text%></span>
+                      </li>
+                  <%end%>
                 </ul>
               </div>
             </div>
@@ -297,12 +340,12 @@
               </div>
               <div style="height:280px;overflow-y:scroll">
                 <ul>
-                  <foreach name="losecredit" item="vo">
-                    <li>
-                      <span class="credit_descr"><{$vo.content}></span>
-                      <span class="credit_countr"><{$vo.credit_point}></span>
-                    </li>
-                  </foreach>
+                  <% @lose_credits.each do |lose|%>
+                      <li>
+                        <span class="credit_descr"><%= lose.clause%></span>
+                        <span class="credit_countr"><%= lose.point_text%></span>
+                      </li>
+                  <%end%>
                 </ul>
               </div>
             </div>
@@ -347,7 +390,7 @@
         </ul>
       </div>
       <div style="padding-bottom: 10%;">
-        <p class="col-lg-12"><{$copyright.copyright_context}></p>
+        <p class="col-lg-12"><%= @copyright.context%></p>
       </div>
     </div>
   </footer>

@@ -5,3 +5,34 @@
 @import 'custom/reset.css';
 @import 'custom/style.css';
 @import 'custom/swiper-3.3.1.min.css';
+
+.btn-primary {
+  background-color: #ff7001;
+  border:0px solid transparent;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #ff7001;
+  opacity:0.6;
+}
+
+.panel {
+  border-color: #ff7001;
+
+}
+.panel-primary .panel-heading{
+  background-color: #ff7001;
+}
+
+body.modal-open {
+  overflow: visible;
+}
+
+.modal-dialog{
+  width: 67%;
+  margin: auto;
+}

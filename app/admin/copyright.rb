@@ -12,4 +12,7 @@ ActiveAdmin.register Copyright do
 #   permitted
 # end
 
+permit_params do
+  permitted = [:context]
+end
 end

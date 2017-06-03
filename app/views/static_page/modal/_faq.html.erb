@@ -5,29 +5,31 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="faq">Modal title</h4>
+        <h4 class="modal-title" id="faq">FAQ</h4>
       </div>
       <div class="modal-body">
-        <div>
 
-          <h4 class="list-group-item-heading">BleeperBike Privacy Policy</h4>            <br>
-
-
-          <p class="list-group-item-text">BleeperBike Ireland Opco Limited ("We") are committed to protecting and
-            respecting your privacy.</p>                  <br>
-
-
-
-          <h4 class="list-group-item-heading">CONTACT</h4>
-
-          <p class="list-group-item-text">Questions, comments and requests regarding this privacy policy are welcomed
-            and should be addressed to
-            <a href="mailto:sayhello@bleeperbike.com">sayhello@bleeperbike.com</a>.
-          </p>
-        </div>
+          <% @faqs.each do |faq| %>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="">
+                <span role="button" data-toggle="collapse" data-parent="#accordion" href="#<%=faq.id%>" aria-expanded="true" aria-controls="collapseOne">
+                  <%=faq.question%>
+                </span>
+                  </h4>
+                </div>
+                <div id="<%=faq.id%>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <%=faq.answer%>
+                  </div>
+                </div>
+              </div>
+              </div>
+          <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
