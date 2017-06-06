@@ -6,10 +6,10 @@ ActiveAdmin.register Credit do
 #
 # or
 #
-# permit_params do
-#   permitted = [:permitted, :attributes]
+permit_params do
+  permitted = [:clause, :point, :point_text, :credit_type_id, :priority]
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+#   params.permit!
+end
 
 end

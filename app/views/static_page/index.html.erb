@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BleeperBike</title>
   <!-- Start of bleeperbike Zendesk Widget script -->
   <script>/*<![CDATA[*/
@@ -41,361 +42,613 @@
   </script>
 </head>
 <body>
+<% if mobile? %>
+    <%= stylesheet_link_tag 'custom/appreset', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'custom/app', media: 'all', 'data-turbolinks-track' => true %>
+
+<% else %>
+    <%= stylesheet_link_tag 'custom/reset', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'custom/style', media: 'all', 'data-turbolinks-track' => true %>
+<% end %>
+
+
 <div id="container">
 
-  <!--header-nav-->
-  <div class="header_wrap navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="col-sm-6">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="/">
-          <% if mobile? %>
-              <%= image_tag('img/mobile/logo.png') %>
-          <% else %>
-              <%= image_tag('img/web/logo.png') %>
-          <% end %>
-        </a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="col-sm-6 collapse navbar-collapse" id="bp-nav-trigger">
-        <ul class="nav navbar-nav">
-          <li><a href="#top">Home</a></li>
-          <li><a href="#works">How&nbspit&nbspWorks</a></li>
-          <li><a href="#rules">Parking&nbsprules</a></li>
-          <li><a href="#price">Price</a></li>
-          <li><a href="#download">Download</a></li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-->
-  </div>
-
-  <!--top_background-img-->
-  <div class="header_bg" id="top">
-    <% if mobile? %>
-        <%= image_tag('img/mobile/banner.png') %>
-    <% else %>
-        <%= image_tag('img/web/banner.png') %>
-    <% end %>
-    <div class="circle sr-slogan">
-      <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
-    </div>
-  </div>
-  <div id="works"></div>
-  <div class="main">
-    <!--phoneloop-->
-    <div class="banner">
-      <div class="banner_title">
-        <h3>HOW&nbspIT&nbspWORKS</h3>
-
-        <p>Download the BleeperBike App onto your smart phone</p>
-      </div>
-      <div class="banner_loop">
-        <div class="loop">
-          <div class="loop_box">
-            <ul class="slidebox">
+  <% unless mobile? %>
+      <!--header-nav-->
+      <div class="header_wrap navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="col-sm-6">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/">
               <% if mobile? %>
-                  <li><%= image_tag('img/mobile/register.png') %></li>
-                  <li><%= image_tag('img/mobile/find.png') %></li>
-                  <li><%= image_tag('img/mobile/unlock.png') %></li>
-                  <li><%= image_tag('img/mobile/ride.png') %></li>
-                  <li><%= image_tag('img/mobile/lock.png') %></li>
+                  <%= image_tag('img/mobile/logo.png') %>
               <% else %>
+                  <%= image_tag('img/web/logo.png') %>
+              <% end %>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="col-sm-6 collapse navbar-collapse" id="bp-nav-trigger">
+            <ul class="nav navbar-nav">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#works">How&nbspit&nbspWorks</a></li>
+              <li><a href="#rules">Parking&nbsprules</a></li>
+              <li><a href="#price">Price</a></li>
+              <li><a href="#download">Download</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-->
+      </div>
+
+      <!--top_background-img-->
+      <div class="header_bg" id="top">
+        <%= image_tag('img/web/banner.png') %>
+        <div class="circle sr-slogan">
+          <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
+        </div>
+      </div>
+      <div id="works"></div>
+      <div class="main">
+        <!--phoneloop-->
+        <div class="banner">
+          <div class="banner_title">
+            <h3>HOW&nbspIT&nbspWORKS</h3>
+
+            <p>Download the BleeperBike App onto your smart phone</p>
+          </div>
+          <div class="banner_loop">
+            <div class="loop">
+              <div class="loop_box">
+                <ul class="slidebox">
                   <li><%= image_tag('img/web/register.png') %></li>
                   <li><%= image_tag('img/web/find.png') %></li>
                   <li><%= image_tag('img/web/unlock.png') %></li>
                   <li><%= image_tag('img/web/ride.png') %></li>
                   <li><%= image_tag('img/web/lock.png') %></li>
-              <% end %>
-              <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/register.png" alt=""></li>-->
-              <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/find.png" alt=""></li>-->
+                </ul>
+                <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/register.png" alt=""></li>-->
+                <!--<li class="swiper-slide"><img src="__PUBLIC__/home/img/web/find.png" alt=""></li>-->
+              </div>
+            </div>
+          </div>
+          <div class="loop_btn">
+            <div class="item">
+              <em class="line"></em>
+
+              <div class="loop_bg bg01"></div>
+              <h3>REGISTER</h3>
+
+              <p>
+                Register by <br>
+                email or phone<br>
+                verification
+              </p>
+            </div>
+            <div class="item">
+              <em class="line"></em>
+
+              <div class="loop_bg bg02"></div>
+              <h3>FIND</h3>
+
+              <p>
+                When you open the <br>
+                app all bikes near you <br>
+                will be displayed <br>
+              </p>
+            </div>
+            <div class="item">
+              <em class="line"></em>
+
+              <div class="loop_bg bg03"></div>
+              <h3>UNLOCK</h3>
+
+              <p>
+                Scan the QR <br>
+                Code or enter <br>
+                the BleeperBike ID <br>
+                No.
+              </p>
+            </div>
+            <div class="item">
+              <em class="line"></em>
+
+              <div class="loop_bg bg04"></div>
+              <h3>RIDE</h3>
+
+              <p>
+                Enjoy you ride <br>
+                AND always obey <br>
+                the rules of the road <br>
+              </p>
+            </div>
+            <div class="item">
+              <!--<em class="line"></em>-->
+              <div class="loop_bg bg05"></div>
+              <h3>LOCK</h3>
+
+              <p>
+                Push Smart lock <br>
+                lever to lock <br>
+                Bleeper. <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--bleeperbike-->
+        <div class="bleeper" id="meet">
+          <div class="bleeper_box">
+            <div class="bleeper_mt">
+              <h3>MEET BLEEPER</h3>
+
+              <p>BleeperBike is comfortable and fun to ride</p>
+            </div>
+            <div class="bleeper_bike">
+              <%= image_tag('img/web/bike.png') %>
+              <ul class="lineBox">
+                <li class="led">
+                  <p>Built in LED light</p>
+
+                  <div class="led_cover">
+                    <div></div>
+                    <div class="led_line cover"></div>
+                  </div>
+                </li>
+                <li class="brake">
+                  <p>Responsive brake</p>
+
+                  <div class="brake_cover">
+                    <div></div>
+                    <div class="brake_line cover"></div>
+                  </div>
+                </li>
+                <li class="hub">
+                  <p>Power generation hub</p>
+
+                  <div class="hub_cover">
+                    <div></div>
+                    <div class="hub_line cover"></div>
+                  </div>
+                </li>
+                <li class="seat">
+                  <p>Adjustable seat</p>
+
+                  <div class="seat_cover">
+                    <div></div>
+                    <div class="seat_line cover"></div>
+                  </div>
+                </li>
+                <li class="gps">
+                  <p>Smart lock with built in GPS</p>
+
+                  <div class="gps_cover">
+                    <div></div>
+                    <div class="gps_line cover"></div>
+                  </div>
+                </li>
+                <li class="built">
+                  <p>Built in LED lights</p>
+
+                  <div class="built_cover">
+                    <div></div>
+                    <div class="built_line cover"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <!--parking_rules-->
+        <div id="rules"></div>
+        <div class="parkingRules">
+          <div class="parking_wrap">
+            <div class="rule_desc">
+              <h3>PARKING RULES</h3>
+
+              <p>Please only park Bleeper at designated parking locations</p>
+              <%= image_tag('img/web/parking.png') %>
+            </div>
+            <div class="rule_morality">
+              <p>It is essential that BleeperBikers <br>
+                respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
+            </div>
+            <div class="rule_img">
+              <%= image_tag('img/web/rule_img.png') %>
+            </div>
+            <!--<div class="rule_morality">
+                <p>It is essential that BleeperBikers <br>
+                    respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
+            </div> -->
+          </div>
+          <div class="rule_design">
+            <%= image_tag('img/web/rule_design.png') %>
+          </div>
+        </div>
+        <!--price-->
+        <div id="price"></div>
+        <div class="price">
+          <!--<div class="price_mtline">-->
+          <!--<img src="" alt="">-->
+          <!--</div>-->
+          <h3>PRICE</h3>
+
+          <div class="price_fee">
+            <div class="price_fee_wrap">
+              <div class="price_fee_box">
+                <% @payments.each do |payment| %>
+                    <p class=""><%= payment.clause %></p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="price_credit">
+            <div class="price_credit_wrap">
+              <div class="credit_l">
+                <div class="credit_wrap">
+                  <div style="overflow: hidden">
+                    <p style="height:30px;">Gain Points</p>
+
+                    <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
+                  </div>
+                  <div style="height:280px;overflow-y:scroll" class="scroll">
+                    <ul>
+                      <% @gain_credits.each do |gain| %>
+                          <li>
+                            <span class="credit_descr"><%= gain.clause %></span>
+                            <span class="credit_countr"><%= gain.point_text %></span>
+                          </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="credit_r">
+                <div class="credit_wrap">
+                  <div style="overflow: hidden">
+                    <p style="height:30px">Lose Points</p>
+
+                    <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
+                  </div>
+                  <div style="height:280px;overflow-y:scroll">
+                    <ul>
+                      <% @lose_credits.each do |lose| %>
+                          <li>
+                            <span class="credit_descr"><%= lose.clause %></span>
+                            <span class="credit_countr"><%= lose.point_text %></span>
+                          </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--download-->
+        <div class="download" id="download">
+          <h3>DOWNLOAD</h3>
+
+          <div class="download_bg"></div>
+          <div class="down_bgimg">
+            <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8" class="iphone">
+              <!--<img src="__PUBLIC__/home/img/web/download.png" alt="">-->
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike" class="android">
+              <!--<img src="__PUBLIC__/home/img/web/download.png" alt="">-->
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container footer_wrap">
+          <div>
+            <ul>
+              <li class="col-lg-4 col-md-12">
+                <strong>LEGAL</strong>
+                <a data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</a>
+                <a data-toggle="modal" data-target="#privacy">Privacy&nbspPolicy</a>
+              </li>
+              <li class=" col-lg-4 col-md-12 paddingtop-bottom">
+                <strong>USEFUL&nbspLINKS</strong>
+                <a data-toggle="modal" data-target="#faq">FAQ</a>
+              </li>
+              <li class=" col-lg-4 col-md-12 paddingtop-bottom ">
+                <strong>APPS</strong>
+                <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download&nbspIOS&nbspapp</a>
+                <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">Download&nbspAndroid&nbspapp</a>
+              </li>
+            </ul>
+          </div>
+          <div style="padding-bottom: 10%;">
+            <p class="col-lg-12"><%= @copyright.context %></p>
+          </div>
+        </div>
+      </footer>
+
+  <% else %>
+      <div class="wrap" id="top">
+        <div class="header">
+          <div class="header_l"></div>
+          <div class="logo"></div>
+          <div class="header_r">
+            <a href="">Download</a>
+          </div>
+          <div class="hidden_ul">
+            <ul>
+              <li><a href="#top" class="muneu_li">Home</a></li>
+              <li><a href="#works" class="muneu_li">How it works</a></li>
+              <li><a href="#rules" class="muneu_li">Parking rules</a></li>
+              <li><a href="#price" class="muneu_li">Price</a></li>
+              <li><a href="" class="muneu_li">Download</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="loop_btn">
-        <div class="item">
-          <em class="line"></em>
 
-          <div class="loop_bg bg01"></div>
-          <h3>REGISTER</h3>
-
-          <p>
-            Register by <br>
-            email or phone<br>
-            verification
-          </p>
-        </div>
-        <div class="item">
-          <em class="line"></em>
-
-          <div class="loop_bg bg02"></div>
-          <h3>FIND</h3>
-
-          <p>
-            When you open the <br>
-            app all bikes near you <br>
-            will be displayed <br>
-          </p>
-        </div>
-        <div class="item">
-          <em class="line"></em>
-
-          <div class="loop_bg bg03"></div>
-          <h3>UNLOCK</h3>
-
-          <p>
-            Scan the QR <br>
-            Code or enter <br>
-            the BleeperBike ID <br>
-            No.
-          </p>
-        </div>
-        <div class="item">
-          <em class="line"></em>
-
-          <div class="loop_bg bg04"></div>
-          <h3>RIDE</h3>
-
-          <p>
-            Enjoy you ride <br>
-            AND always obey <br>
-            the rules of the road <br>
-          </p>
-        </div>
-        <div class="item">
-          <!--<em class="line"></em>-->
-          <div class="loop_bg bg05"></div>
-          <h3>LOCK</h3>
-
-          <p>
-            Push Smart lock <br>
-            lever to lock <br>
-            Bleeper. <br>
-          </p>
+      <div class="header_bg">
+        <%= image_tag('img/mobile/banner.png') %>
+        <div class="circle sr-slogan">
+          <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
         </div>
       </div>
-    </div>
+      <!--loop-->
+      <div class="banner" id="works">
+        <div class="banner_title">
+          <h3>HOW&nbspIT&nbspWORKS</h3>
 
-    <!--bleeperbike-->
-    <div class="bleeper" id="meet">
-      <div class="bleeper_box">
-        <div class="bleeper_mt">
-          <h3>MEET BLEEPER</h3>
-
-          <p>BleeperBike is comfortable and fun to ride</p>
+          <p>Download the BleeperBike App onto your smart phone</p>
         </div>
-        <div class="bleeper_bike">
-          <% if mobile? %>
+        <div class="banner_loop">
+          <div class="loop">
+            <div class="loop_box">
+              <div class="slide swiper-container" id="swiper-container1">
+                <ul class="swiper-wrapper">
+                  <li><%= image_tag('img/mobile/register.png') %></li>
+                  <li><%= image_tag('img/mobile/find.png') %></li>
+                  <li><%= image_tag('img/mobile/unlock.png') %></li>
+                  <li><%= image_tag('img/mobile/ride.png') %></li>
+                  <li><%= image_tag('img/mobile/lock.png') %></li>
+                </ul>
+                <div class="swiper-pagination" style="display:none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banner_desc swiper-container" id="swiper-container2">
+          <div class="slide_box swiper-wrapper">
+            <div class="item swiper-slide">
+              <!--<em class="line"></em>-->
+              <!--<div class="loop_bg bg01"></div>-->
+              <h3>REGISTER</h3>
+
+              <p>
+                Register by email or phone verification
+              </p>
+            </div>
+            <div class="item swiper-slide">
+              <!--<em class="line"></em>
+              <div class="loop_bg bg02"></div>-->
+              <h3>FIND</h3>
+
+              <p>
+                When you open the app all bikes near you will be displayed
+              </p>
+            </div>
+            <div class="item swiper-slide">
+              <!--<em class="line"></em>-->
+              <!--<div class="loop_bg bg03"></div>-->
+              <h3>UNLOCK</h3>
+
+              <p>
+                Scan the QR Code or enter the BleeperBike ID No.
+              </p>
+            </div>
+            <div class="item swiper-slide">
+              <!--<em class="line"></em>-->
+              <!--<div class="loop_bg bg04"></div>-->
+              <h3>RIDE</h3>
+
+              <p>
+                Enjoy you ride AND always obey the rules of the road
+              </p>
+            </div>
+            <div class="item swiper-slide">
+              <!--<em class="line"></em>-->
+              <!--<div class="loop_bg bg05"></div>-->
+              <h3>LOCK</h3>
+
+              <p>
+                Push Smart lock lever to lock Bleeper.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination" style="bottom:0"></div>
+        </div>
+      </div>
+      <!--meet-->
+      <div class="meet">
+        <div class="bleeper" id="meet">
+          <div class="bleeper_box">
+            <div class="bleeper_mt">
+              <h3>MEET BLEEPER</h3>
+
+              <p>BleeperBike is comfortable and fun to ride</p>
+            </div>
+            <div class="bleeper_bike">
               <%= image_tag('img/mobile/bike.png') %>
-          <% else %>
-              <%= image_tag('img/web/bike.png') %>
-          <% end %>
-          <ul class="lineBox">
-            <li class="led">
-              <p>Built in LED light</p>
 
-              <div class="led_cover">
-                <div></div>
-                <div class="led_line cover"></div>
+              <ul class="lineBox">
+                <li class="led">
+                  <p>Built in LED light</p>
+
+                  <div class="led_cover">
+                    <div></div>
+                    <div class="led_line cover"></div>
+                  </div>
+                </li>
+                <li class="brake">
+                  <p>Responsive brake</p>
+
+                  <div class="brake_cover">
+                    <div></div>
+                    <div class="brake_line cover"></div>
+                  </div>
+                </li>
+                <li class="hub">
+                  <p>Power generation hub</p>
+
+                  <div class="hub_cover">
+                    <div></div>
+                    <div class="hub_line cover"></div>
+                  </div>
+                </li>
+                <li class="seat">
+                  <p>Adjustable seat</p>
+
+                  <div class="seat_cover">
+                    <div></div>
+                    <div class="seat_line cover"></div>
+                  </div>
+                </li>
+                <li class="gps">
+                  <p>Smart lock with built in GPS</p>
+
+                  <div class="gps_cover">
+                    <div></div>
+                    <div class="gps_line cover"></div>
+                  </div>
+                </li>
+                <li class="built">
+                  <p>Built in LED lights</p>
+
+                  <div class="built_cover">
+                    <div></div>
+                    <div class="built_line cover"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--parking rules-->
+      <div class="parkingRules" id="rules">
+        <div class="parking_wrap">
+          <div class="rule_desc">
+            <h3>PARKING RULES</h3>
+
+            <p>Please only park Bleeper at designated parking locations</p>
+            <%= image_tag('img/mobile/parking.png') %>
+          </div>
+          <div class="rule_morality">
+            <p>It is essential that BleeperBikers <br>
+              respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
+          </div>
+          <div class="rule_img">
+            <%= image_tag('img/mobile/tuzu.png') %>
+          </div>
+        </div>
+        <!--<div class="rule_design">-->
+        <!--<img src="img/rule_design.png" alt="">-->
+        <!--</div>-->
+      </div>
+      <!--price-->
+      <div class="price" id="price">
+        <!--<div class="price_mtline">-->
+        <!--<img src="" alt="">-->
+        <!--</div>-->
+        <h3>PRICE</h3>
+
+        <div class="price_wrap">
+          <div class="price_fee">
+            <div class="price_t">
+              <%= image_tag('img/mobile/PayAsYouGo.png') %>
+            </div>
+            <div class="price_fee_box">
+              <foreach name="billing_data" item="vo" key="k">
+                <p><{$vo.billing_plan_details}></p>
+                <if condition="($k+1) neq count($billing_data)">
+                  <p>or</p>
+                </if>
+              </foreach>
+            </div>
+            <div class="price_i">
+              <%= image_tag('img/mobile/pay.png') %>
+            </div>
+          </div>
+          <!--<div class="price_i">-->
+          <!--<img src="__PUBLIC__/home/img/mobile/pay.png" alt="">-->
+          <!--</div>-->
+          <div class="price_credit">
+            <div class="price_credit_wrap">
+              <div class="credit_l">
+                <div class="credit_l_img">
+                  <%= image_tag('img/mobile/creditl.png') %>
+                </div>
+                <div class="credit_wrap">
+                  <p>Gain Points</p>
+                  <ul style="height:4rem;overflow-y: scroll">
+                    <foreach name="gaincredit" item="vo">
+                      <li>
+                        <span class="credit_descr"><{$vo.content}></span>
+                        <span class="credit_countr"><{$vo.credit_point}></span>
+                      </li>
+                    </foreach>
+                  </ul>
+                </div>
               </div>
+              <div class="credit_r">
+                <div class="credit_r_img">
+                  <%= image_tag('img/mobile/creditl.png') %>
+                </div>
+                <div class="credit_wrap">
+                  <p>Lose Points</p>
+                  <ul style="height:4rem;overflow-y: scroll">
+                    <foreach name="losecredit" item="vo">
+                      <li>
+                        <span class="credit_descr"><{$vo.content}></span>
+                        <span class="credit_countr"><{$vo.credit_point}></span>
+                      </li>
+                    </foreach>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer_wrap">
+          <div class="bike_logo"></div>
+          <ul>
+            <li>
+              <strong>LEGAL</strong>
+              <span id="TERM" data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</span>
+              <span  data-toggle="modal" data-target="#privacy" style="margin-top: .68rem;" id="POLICY">Privacy&nbspPolicy</span>
             </li>
-            <li class="brake">
-              <p>Responsive brake</p>
-
-              <div class="brake_cover">
-                <div></div>
-                <div class="brake_line cover"></div>
-              </div>
-            </li>
-            <li class="hub">
-              <p>Power generation hub</p>
-
-              <div class="hub_cover">
-                <div></div>
-                <div class="hub_line cover"></div>
-              </div>
-            </li>
-            <li class="seat">
-              <p>Adjustable seat</p>
-
-              <div class="seat_cover">
-                <div></div>
-                <div class="seat_line cover"></div>
-              </div>
-            </li>
-            <li class="gps">
-              <p>Smart lock with built in GPS</p>
-
-              <div class="gps_cover">
-                <div></div>
-                <div class="gps_line cover"></div>
-              </div>
-            </li>
-            <li class="built">
-              <p>Built in LED lights</p>
-
-              <div class="built_cover">
-                <div></div>
-                <div class="built_line cover"></div>
-              </div>
+            <li class="useful">
+              <strong>USEFUL&nbspLINKS</strong>
+              <span id="FAQ" data-toggle="modal" data-target="#faq">FAQ</span>
             </li>
           </ul>
+
+          <p class="ltd"><{$copyright.copyright_context}></p>
         </div>
       </div>
-    </div>
-
-
-    <!--parking_rules-->
-    <div id="rules"></div>
-    <div class="parkingRules">
-      <div class="parking_wrap">
-        <div class="rule_desc">
-          <h3>PARKING RULES</h3>
-
-          <p>Please only park Bleeper at designated parking locations</p>
-          <% if mobile? %>
-              <%= image_tag('img/mobile/parking.png') %>
-          <% else %>
-              <%= image_tag('img/web/parking.png') %>
-          <% end %>
-
-        </div>
-        <div class="rule_morality">
-          <p>It is essential that BleeperBikers <br>
-            respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
-        </div>
-        <div class="rule_img">
-          <% if mobile? %>
-              <%= image_tag('img/mobile/tuzu.png') %>
-          <% else %>
-              <%= image_tag('img/web/rule_img.png') %>
-          <% end %>
-        </div>
-        <!--<div class="rule_morality">
-            <p>It is essential that BleeperBikers <br>
-                respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
-        </div> -->
-      </div>
-      <div class="rule_design">
-        <% if mobile? %>
-            <%=
-                # image_tag('img/mobile/rule_design.png')
-            %>
-        <% else %>
-            <%= image_tag('img/web/rule_design.png') %>
-        <% end %>
-      </div>
-    </div>
-    <!--price-->
-    <div id="price"></div>
-    <div class="price">
-      <!--<div class="price_mtline">-->
-      <!--<img src="" alt="">-->
-      <!--</div>-->
-      <h3>PRICE</h3>
-
-      <div class="price_fee">
-        <div class="price_fee_wrap">
-          <div class="price_fee_box">
-            <% @payments.each do |payment|%>
-                  <p class=""><%= payment.clause%></p>
-            <%end%>
-          </div>
-        </div>
-      </div>
-      <div class="price_credit">
-        <div class="price_credit_wrap">
-          <div class="credit_l">
-            <div class="credit_wrap">
-              <div style="overflow: hidden">
-                <p style="height:30px;">Gain Points</p>
-
-                <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
-              </div>
-              <div style="height:280px;overflow-y:scroll" class="scroll">
-                <ul>
-                  <% @gain_credits.each do |gain|%>
-                      <li>
-                        <span class="credit_descr"><%= gain.clause%></span>
-                        <span class="credit_countr"><%= gain.point_text%></span>
-                      </li>
-                  <%end%>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="credit_r">
-            <div class="credit_wrap">
-              <div style="overflow: hidden">
-                <p style="height:30px">Lose Points</p>
-
-                <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
-              </div>
-              <div style="height:280px;overflow-y:scroll">
-                <ul>
-                  <% @lose_credits.each do |lose|%>
-                      <li>
-                        <span class="credit_descr"><%= lose.clause%></span>
-                        <span class="credit_countr"><%= lose.point_text%></span>
-                      </li>
-                  <%end%>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--download-->
-    <div class="download" id="download">
-      <h3>DOWNLOAD</h3>
-
-      <div class="download_bg"></div>
-      <div class="down_bgimg">
-        <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8" class="iphone">
-          <!--<img src="__PUBLIC__/home/img/web/download.png" alt="">-->
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike" class="android">
-          <!--<img src="__PUBLIC__/home/img/web/download.png" alt="">-->
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer_wrap">
-      <div>
-        <ul>
-          <li class="col-lg-4 col-md-12">
-            <strong>LEGAL</strong>
-            <a data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</a>
-            <a data-toggle="modal" data-target="#privacy">Privacy&nbspPolicy</a>
-          </li>
-          <li class=" col-lg-4 col-md-12 paddingtop-bottom">
-            <strong>USEFUL&nbspLINKS</strong>
-            <a data-toggle="modal" data-target="#faq">FAQ</a>
-          </li>
-          <li class=" col-lg-4 col-md-12 paddingtop-bottom ">
-            <strong>APPS</strong>
-            <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download&nbspIOS&nbspapp</a>
-            <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">Download&nbspAndroid&nbspapp</a>
-          </li>
-        </ul>
-      </div>
-      <div style="padding-bottom: 10%;">
-        <p class="col-lg-12"><%= @copyright.context%></p>
-      </div>
-    </div>
-  </footer>
+  <% end %>
 </div>
 
 <%= render 'static_page/modal/privacy' %>
@@ -408,105 +661,14 @@
 <!--<script src="__PUBLIC__/home/js/swiper-3.3.1.jquery.min.js"></script>-->
 <!--<script src="__PUBLIC__/home/js/slide.js"></script>-->
 <!--<script src="__PUBLIC__/home/js/scrollreveal.min.js"></script>-->
-<%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js' %>
 <%= javascript_include_tag 'custom/slide.js' %>
 <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
-
-<script>
-  $('#bp-nav-trigger a').click(function(){
-      var index = $(this).attr('href');
-      $('body, html').animate({scrollTop: $(index).offset().top}, "slow");
-      return false;
-  });
-
-    $(document).ready(function () {
-        var height = $('.scroll').height();
-        console.log(height)
-        if (height > 280) {
-            $('.scroll').addClass('.overflow_hidden')
-        }
-        window.onscroll = function () {
-            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-//            console.log(scrollTop);
-            if (scrollTop >= 1950) {
-                $('.lineBox>li>p').show(100);
-                $('.led_cover').show(700);
-                $('.brake_cover').show(700);
-                $('.hub_cover').show(700);
-                $('.seat_cover').show(700);
-                $('.gps_cover').show(700);
-                $('.built_cover').show(700);
-            } else if (scrollTop <= 1250 || scrollTop >= 2650) {
-                $('.lineBox>li>p').hide(100);
-                $('.led_cover').hide(700);
-                $('.brake_cover').hide(700);
-                $('.hub_cover').hide(700);
-                $('.seat_cover').hide(700);
-                $('.gps_cover').hide(700);
-                $('.built_cover').hide(700);
-            }
-        };
-        window.sr = ScrollReveal();
-        sr.reveal('.sr-slogan', {
-            origin: 'top',
-            duration: 500,
-            scale: 1.1,
-            mobile: true,
-        }, 300);
-        //faq
-        $('#FAQ').click(function () {
-            $('.zezao').show();
-            $('.faq').show();
-        });
-        $('.close').click(function () {
-            $('.zezao').hide();
-            $('.faq').hide();
-        });
-        $('#TERM').click(function () {
-            $('.zezao').show();
-            $('.term').show();
-        });
-        $('.close1').click(function () {
-            $('.zezao').hide();
-            $('.term').hide();
-        });
-        $('#POLICY').click(function () {
-            $('.zezao').show();
-            $('.policy').show();
-        });
-        $('.close2').click(function () {
-            $('.zezao').hide();
-            $('.policy').hide();
-        });
-        setTimeout(function () {
-            $('.circle').show(700);
-        }, 800);
-        $('.zezao').click(function () {
-            $('.zezao').hide();
-            $('.term').hide();
-            $('.faq').hide();
-            $('.policy').hide();
-        });
-
-    })
-    var navbar = document.getElementsByClassName('navbar');
-    var Goindex = document.getElementsByClassName('Goindex');
-    for (var i = 0; i < navbar.length; i++) {
-//				var index = hover[i];
-        navbar[i].setAttribute("id", i);
-        var id = navbar[i].getAttribute("id");
-//				console.log(hover[i])
-        console.log(id);
-//
-    }
-    for (var i = 0; i < Goindex.length; i++) {
-//				var index = hover[i];
-        Goindex[i].setAttribute("href", '#' + i);
-        var index = Goindex[i].getAttribute("href");
-//				console.log(hover[i])
-        console.log(index);
-//
-    }
-</script>
+<% if mobile? %>
+    <%= javascript_include_tag 'custom/mobile_addedon_js.js' %>
+    <%= javascript_include_tag 'custom/zepto.min.js' %>
+<% else %>
+    <%= javascript_include_tag 'custom/desktop_addedon_js.js' %>
+    <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js' %>
+<% end %>
 </body>
 </html>
