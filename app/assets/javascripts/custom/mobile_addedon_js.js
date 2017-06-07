@@ -1,7 +1,11 @@
-$('#mobile-nav-trigger a').click(function () {
+$('#bp-nav-trigger a').click(function () {
     var index = $(this).attr('href');
     $('body, html').animate({scrollTop: $(index).offset().top}, "slow");
     return false;
+});
+
+$('.nav a').on('click', function(){
+    $('.navbar-toggle').click() //bootstrap 3.x by Richard
 });
 
 $(document).ready(function () {

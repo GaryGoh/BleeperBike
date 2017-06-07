@@ -45,7 +45,7 @@
 <% if mobile? %>
     <%= stylesheet_link_tag 'custom/appreset', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'custom/app', media: 'all', 'data-turbolinks-track' => true %>
-
+    <%= javascript_include_tag 'custom/reset.js' %>
 <% else %>
     <%= stylesheet_link_tag 'custom/reset', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'custom/style', media: 'all', 'data-turbolinks-track' => true %>
@@ -289,6 +289,7 @@
               <div class="price_fee_box">
                 <% @payments.each do |payment| %>
                     <p class=""><%= payment.clause %></p>
+                    <br>
                 <% end %>
               </div>
             </div>
@@ -379,24 +380,70 @@
       </footer>
 
   <% else %>
-      <div class="wrap" id="top">
-        <div class="header">
-          <div class="header_l"></div>
-          <div class="logo"></div>
-          <div class="header_r">
-            <a href="">Download</a>
+      <!--<div class="wrap" id="top">-->
+      <!--<div class="header">-->
+      <!--<div class="header_l"></div>-->
+      <!--<div class="logo"></div>-->
+      <!--<div class="header_r">-->
+      <!--<a href="">Download</a>-->
+      <!--</div>-->
+      <!--<div class="hidden_ul">-->
+      <!--<ul>-->
+      <!--<li><a href="#top" class="muneu_li">Home</a></li>-->
+      <!--<li><a href="#works" class="muneu_li">How it works</a></li>-->
+      <!--<li><a href="#rules" class="muneu_li">Parking rules</a></li>-->
+      <!--<li><a href="#price" class="muneu_li">Price</a></li>-->
+      <!--<li><a href="" class="muneu_li">Download</a></li>-->
+      <!--</ul>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+
+
+      <!--header-nav-->
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="col-sm-6">
+            <div class="container">
+
+              <button type="button" class="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a href="/">
+                <div class="logo"></div>
+              </a>
+            </div>
           </div>
-          <div class="hidden_ul">
-            <ul>
-              <li><a href="#top" class="muneu_li">Home</a></li>
-              <li><a href="#works" class="muneu_li">How it works</a></li>
-              <li><a href="#rules" class="muneu_li">Parking rules</a></li>
-              <li><a href="#price" class="muneu_li">Price</a></li>
-              <li><a href="" class="muneu_li">Download</a></li>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="col-sm-6 collapse navbar-collapse" id="bp-nav-trigger">
+            <ul class="nav navbar-nav">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#works">How&nbspit&nbspWorks</a></li>
+              <li><a href="#rules">Parking&nbsprules</a></li>
+              <li><a href="#price">Price</a></li>
+              <% if ios? %>
+                  <li><a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download</a>
+                  </li>
+            <% elsif android? %>
+                  <li><a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">Download</a></li>
+
+              <% else %>
+                  <li><a href="">We don't support you device - <%= getDevice %></a></li>
+              <% end %>
             </ul>
           </div>
+          <!-- /.navbar-collapse -->
+
         </div>
+        <!-- /.container-->
       </div>
+
 
       <div class="header_bg">
         <%= image_tag('img/mobile/banner.png') %>
@@ -578,12 +625,10 @@
               <%= image_tag('img/mobile/PayAsYouGo.png') %>
             </div>
             <div class="price_fee_box">
-              <foreach name="billing_data" item="vo" key="k">
-                <p><{$vo.billing_plan_details}></p>
-                <if condition="($k+1) neq count($billing_data)">
-                  <p>or</p>
-                </if>
-              </foreach>
+              <% @payments.each do |payment| %>
+                  <p class=""><%= payment.clause %></p>
+                  <br>
+              <% end %>
             </div>
             <div class="price_i">
               <%= image_tag('img/mobile/pay.png') %>
@@ -601,12 +646,12 @@
                 <div class="credit_wrap">
                   <p>Gain Points</p>
                   <ul style="height:4rem;overflow-y: scroll">
-                    <foreach name="gaincredit" item="vo">
-                      <li>
-                        <span class="credit_descr"><{$vo.content}></span>
-                        <span class="credit_countr"><{$vo.credit_point}></span>
-                      </li>
-                    </foreach>
+                    <% @gain_credits.each do |gain| %>
+                        <li>
+                          <span class="credit_descr"><%= gain.clause %></span>
+                          <span class="credit_countr"><%= gain.point_text %></span>
+                        </li>
+                    <% end %>
                   </ul>
                 </div>
               </div>
@@ -617,12 +662,12 @@
                 <div class="credit_wrap">
                   <p>Lose Points</p>
                   <ul style="height:4rem;overflow-y: scroll">
-                    <foreach name="losecredit" item="vo">
-                      <li>
-                        <span class="credit_descr"><{$vo.content}></span>
-                        <span class="credit_countr"><{$vo.credit_point}></span>
-                      </li>
-                    </foreach>
+                    <% @lose_credits.each do |lose| %>
+                        <li>
+                          <span class="credit_descr"><%= lose.clause %></span>
+                          <span class="credit_countr"><%= lose.point_text %></span>
+                        </li>
+                    <% end %>
                   </ul>
                 </div>
               </div>
@@ -637,7 +682,7 @@
             <li>
               <strong>LEGAL</strong>
               <span id="TERM" data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</span>
-              <span  data-toggle="modal" data-target="#privacy" style="margin-top: .68rem;" id="POLICY">Privacy&nbspPolicy</span>
+              <span data-toggle="modal" data-target="#privacy" style="margin-top: .68rem;" id="POLICY">Privacy&nbspPolicy</span>
             </li>
             <li class="useful">
               <strong>USEFUL&nbspLINKS</strong>
@@ -645,7 +690,7 @@
             </li>
           </ul>
 
-          <p class="ltd"><{$copyright.copyright_context}></p>
+          <p class="ltd"><%= @copyright.context %></p>
         </div>
       </div>
   <% end %>
@@ -656,11 +701,6 @@
 <%= render 'static_page/modal/faq' %>
 
 
-
-<!--<script src="__PUBLIC__/home/js/jquery-1.7.1.min.js"></script>-->
-<!--<script src="__PUBLIC__/home/js/swiper-3.3.1.jquery.min.js"></script>-->
-<!--<script src="__PUBLIC__/home/js/slide.js"></script>-->
-<!--<script src="__PUBLIC__/home/js/scrollreveal.min.js"></script>-->
 <%= javascript_include_tag 'custom/slide.js' %>
 <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
 <% if mobile? %>
