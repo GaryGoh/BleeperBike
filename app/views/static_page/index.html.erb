@@ -612,6 +612,8 @@
         <!--<img src="img/rule_design.png" alt="">-->
         <!--</div>-->
       </div>
+
+
       <!--price-->
       <div class="price" id="price">
         <!--<div class="price_mtline">-->
@@ -701,14 +703,18 @@
 <%= render 'static_page/modal/faq' %>
 
 
-<%= javascript_include_tag 'custom/slide.js' %>
-<%= javascript_include_tag 'custom/scrollreveal.min.js' %>
+
 <% if mobile? %>
-    <%= javascript_include_tag 'custom/mobile_addedon_js.js' %>
     <%= javascript_include_tag 'custom/zepto.min.js' %>
-<% else %>
-    <%= javascript_include_tag 'custom/desktop_addedon_js.js' %>
+    <%= javascript_include_tag 'custom/jquery-1.7.1.min.js' %>
     <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js' %>
+    <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
+    <%= javascript_include_tag 'custom/mobile_addedon_js.js' %>
+<% else %>
+    <%= javascript_include_tag 'custom/slide.js' %>
+    <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
+    <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js' %>
+    <%= javascript_include_tag 'custom/desktop_addedon_js.js' %>
 <% end %>
 </body>
 </html>
