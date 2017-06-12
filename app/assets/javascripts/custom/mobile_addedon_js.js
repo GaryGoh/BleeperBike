@@ -31,7 +31,7 @@ $(document).ready(function () {
     var Swiper1 = new Swiper('#swiper-container1', {
         loop: true,
         speed: 500, observer: true,
-        observeParents: true, autoplayDisableOnInteraction: false,
+        observeParents: true, autoplayDisableOnInteraction: true,
         autoplay: 3000,
         pagination: '.swiper-pagination',
     });

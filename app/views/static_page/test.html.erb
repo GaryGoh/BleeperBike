@@ -1,100 +1,86 @@
-<div class="header_wrap navbar navbar-default">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="col-sm-6">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <a href="/">
-          <% if mobile? %>
-              <%= image_tag('img/mobile/logo.png') %>
-          <% else %>
-              <%= image_tag('img/web/logo.png') %>
-          <% end %>
-        </a>
-    </div>
+<%= stylesheet_link_tag  'custom/appreset.css', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag  'custom/app.css', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag  'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'custom/reset.js', 'data-turbolinks-track' => true %>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="col-sm-6 collapse navbar-collapse" id="bp-nav-trigger">
-      <ul class="nav navbar-nav">
-        <li><a href="#top">Home</a></li>
-        <li><a href="#works">How&nbspit&nbspWorks</a></li>
-        <li><a href="#rules">Parking&nbsprules</a></li>
-        <li><a href="#price">Price</a></li>
-        <li><a href="#download">Download</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
+
+<div class="banner" id="works">
+  <div class="banner_title">
+    <h3>HOW&nbspIT&nbspWORKS</h3>
+
+    <p>Download the BleeperBike App onto your smart phone</p>
   </div>
-  <!-- /.container-->
+  <div class="banner_loop">
+    <div class="loop">
+      <div class="loop_box">
+        <div class="slide swiper-container" id="swiper-container1">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide"><%= image_tag('img/mobile/register.png') %></li>
+            <li class="swiper-slide"><%= image_tag('img/mobile/find.png') %></li>
+            <li class="swiper-slide"><%= image_tag('img/mobile/unlock.png') %></li>
+            <li class="swiper-slide"><%= image_tag('img/mobile/ride.png') %></li>
+            <li class="swiper-slide"><%= image_tag('img/mobile/lock.png') %></li>
+          </ul>
+          <div class="swiper-pagination" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner_desc swiper-container" id="swiper-container2">
+    <div class="slide_box swiper-wrapper">
+      <div class="item swiper-slide">
+        <!--<em class="line"></em>-->
+        <!--<div class="loop_bg bg01"></div>-->
+        <h3>REGISTER</h3>
+
+        <p>
+          Register by email or phone verification
+        </p>
+      </div>
+      <div class="item swiper-slide">
+        <!--<em class="line"></em>
+        <div class="loop_bg bg02"></div>-->
+        <h3>FIND</h3>
+
+        <p>
+          When you open the app all bikes near you will be displayed
+        </p>
+      </div>
+      <div class="item swiper-slide">
+        <!--<em class="line"></em>-->
+        <!--<div class="loop_bg bg03"></div>-->
+        <h3>UNLOCK</h3>
+
+        <p>
+          Scan the QR Code or enter the BleeperBike ID No.
+        </p>
+      </div>
+      <div class="item swiper-slide">
+        <!--<em class="line"></em>-->
+        <!--<div class="loop_bg bg04"></div>-->
+        <h3>RIDE</h3>
+
+        <p>
+          Enjoy you ride AND always obey the rules of the road
+        </p>
+      </div>
+      <div class="item swiper-slide">
+        <!--<em class="line"></em>-->
+        <!--<div class="loop_bg bg05"></div>-->
+        <h3>LOCK</h3>
+
+        <p>
+          Push Smart lock lever to lock Bleeper.
+        </p>
+      </div>
+    </div>
+    <div class="swiper-pagination" style="bottom:0"></div>
+  </div>
 </div>
 
+<%= javascript_include_tag 'custom/jquery-1.7.1.min.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'custom/slide.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'custom/zepto.min.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'custom/mobile_addedon_js.js', 'data-turbolinks-track' => true %>
 
-
-<!--<nav class="navbar navbar-default navbar-fixed-top">-->
-<!--<a class="navbar-brand" href="#">Fixed navbar</a>-->
-<!--</nav>-->
-
-<!--&lt;!&ndash; Button trigger modal &ndash;&gt;-->
-<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"-->
-<!--xmlns="http://www.w3.org/1999/html">-->
-<!--Launch demo modal-->
-<!--</button>-->
-
-<!--&lt;!&ndash; Modal &ndash;&gt;-->
-<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
-<!--<div class="modal-dialog" role="document">-->
-<!--<div class="modal-content">-->
-<!--<div class="modal-header">-->
-<!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--<span aria-hidden="true">&times;</span></button>-->
-<!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
-<!--</div>-->
-<!--<div class="modal-body">-->
-<!--<div class="row">-->
-<!--<h4 class="list-group-item-heading">BleeperBike Privacy Policy</h4>-->
-
-<!--<p class="list-group-item-text">BleeperBike Ireland Opco Limited ("We") are committed to protecting and-->
-<!--respecting your privacy.</p>-->
-<!--</div>-->
-
-<!--</div>-->
-<!--<div class="modal-footer">-->
-<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--<button type="button" class="btn btn-primary">Save changes</button>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-
-
-
-<!--<footer class="footer">-->
-<!--<div class="container footer_wrap">-->
-<!--<div>-->
-<!--<ul>-->
-<!--<li class="col-lg-4 col-md-12">-->
-<!--<strong>LEGAL</strong>-->
-<!--<a data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</a>-->
-<!--<a data-toggle="modal" data-target="#privacy">Privacy&nbspPolicy</a>-->
-<!--</li>-->
-<!--<li class=" col-lg-4 col-md-12 paddingtop-bottom">-->
-<!--<strong>USEFUL&nbspLINKS</strong>-->
-<!--<a data-toggle="modal" data-target="#faq">FAQ</a>-->
-<!--</li>-->
-<!--<li class=" col-lg-4 col-md-12 paddingtop-bottom ">-->
-<!--<strong>APPS</strong>-->
-<!--<a href="###">Download&nbspIOS&nbspapp</a>-->
-<!--<a href="###">Download&nbspAndroid&nbspapp</a>-->
-<!--</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--<div>-->
-<!--<p class="col-lg-12"><{$copyright.copyright_context}></p>-->
-<!--</div>-->
-<!--</div>-->
-<!--</footer>-->

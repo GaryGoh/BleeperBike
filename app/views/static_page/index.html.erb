@@ -50,6 +50,7 @@
     <%= stylesheet_link_tag 'custom/reset', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'custom/style', media: 'all', 'data-turbolinks-track' => true %>
 <% end %>
+<%= stylesheet_link_tag  'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
 
 
 <div id="container">
@@ -97,6 +98,7 @@
           <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
         </div>
       </div>
+      <br><br><br><br>
       <div id="works"></div>
       <div class="main">
         <!--phoneloop-->
@@ -452,6 +454,7 @@
         </div>
       </div>
       <!--loop-->
+
       <div class="banner" id="works">
         <div class="banner_title">
           <h3>HOW&nbspIT&nbspWORKS</h3>
@@ -463,11 +466,11 @@
             <div class="loop_box">
               <div class="slide swiper-container" id="swiper-container1">
                 <ul class="swiper-wrapper">
-                  <li><%= image_tag('img/mobile/register.png') %></li>
-                  <li><%= image_tag('img/mobile/find.png') %></li>
-                  <li><%= image_tag('img/mobile/unlock.png') %></li>
-                  <li><%= image_tag('img/mobile/ride.png') %></li>
-                  <li><%= image_tag('img/mobile/lock.png') %></li>
+                  <li class="swiper-slide"><%= image_tag('img/mobile/register.png') %></li>
+                  <li class="swiper-slide"><%= image_tag('img/mobile/find.png') %></li>
+                  <li class="swiper-slide"><%= image_tag('img/mobile/unlock.png') %></li>
+                  <li class="swiper-slide"><%= image_tag('img/mobile/ride.png') %></li>
+                  <li class="swiper-slide"><%= image_tag('img/mobile/lock.png') %></li>
                 </ul>
                 <div class="swiper-pagination" style="display:none"></div>
               </div>
@@ -706,7 +709,7 @@
 
 <% if mobile? %>
     <%= javascript_include_tag 'custom/zepto.min.js' %>
-    <%= javascript_include_tag 'custom/jquery-1.7.1.min.js' %>
+    <%= javascript_include_tag 'custom/slide.js' %>
     <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js' %>
     <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
     <%= javascript_include_tag 'custom/mobile_addedon_js.js' %>
