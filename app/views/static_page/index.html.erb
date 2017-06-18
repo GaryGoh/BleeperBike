@@ -43,14 +43,15 @@
 </head>
 <body>
 <% if mobile? %>
-    <%= stylesheet_link_tag 'custom/appreset', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag 'custom/app', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'custom/reset.js' %>
+    <%= stylesheet_link_tag  'custom/appreset.css', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag  'custom/app.css', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag  'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'custom/reset.js', 'data-turbolinks-track' => true %>
 <% else %>
     <%= stylesheet_link_tag 'custom/reset', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'custom/style', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag  'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
 <% end %>
-<%= stylesheet_link_tag  'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
 
 
 <div id="container">
@@ -60,7 +61,7 @@
       <div class="header_wrap navbar navbar-default navbar-fixed-top">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="col-sm-6">
+          <div class="col-sm-5">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
@@ -77,13 +78,15 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="col-sm-6 collapse navbar-collapse" id="bp-nav-trigger">
+          <div class="col-sm-7 collapse navbar-collapse" id="bp-nav-trigger">
             <ul class="nav navbar-nav">
               <li><a href="#top">Home</a></li>
               <li><a href="#works">How&nbspit&nbspWorks</a></li>
               <li><a href="#rules">Parking&nbsprules</a></li>
               <li><a href="#price">Price</a></li>
               <li><a href="#download">Download</a></li>
+              <li><a href="mailto:sayhello@bleeperbike.com">Contact Us</a></li>
+
             </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -93,7 +96,7 @@
 
       <!--top_background-img-->
       <div class="header_bg" id="top">
-        <%= image_tag('img/web/banner.png') %>
+        <%= image_tag('img/web/banner_v2.jpg') %>
         <div class="circle sr-slogan">
           <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
         </div>
@@ -260,7 +263,7 @@
               <h3>PARKING RULES</h3>
 
               <p>Please only park Bleeper at designated parking locations</p>
-              <%= image_tag('img/web/parking.png') %>
+              <%= image_tag('img/web/parking_v2.png') %>
             </div>
             <div class="rule_morality">
               <p>It is essential that BleeperBikers <br>
@@ -429,6 +432,7 @@
               <li><a href="#works">How&nbspit&nbspWorks</a></li>
               <li><a href="#rules">Parking&nbsprules</a></li>
               <li><a href="#price">Price</a></li>
+              <li><a href="mailto:sayhello@bleeperbike.com">Contact Us</a></li>
               <% if ios? %>
                   <li><a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download</a>
                   </li>
@@ -448,7 +452,7 @@
 
 
       <div class="header_bg">
-        <%= image_tag('img/mobile/banner.png') %>
+        <%= image_tag('img/mobile/banner_v2.jpg') %>
         <div class="circle sr-slogan">
           <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
         </div>
@@ -528,6 +532,7 @@
           <div class="swiper-pagination" style="bottom:0"></div>
         </div>
       </div>
+
       <!--meet-->
       <div class="meet">
         <div class="bleeper" id="meet">
@@ -601,7 +606,7 @@
             <h3>PARKING RULES</h3>
 
             <p>Please only park Bleeper at designated parking locations</p>
-            <%= image_tag('img/mobile/parking.png') %>
+            <%= image_tag('img/mobile/parking_v2.png') %>
           </div>
           <div class="rule_morality">
             <p>It is essential that BleeperBikers <br>
@@ -708,11 +713,10 @@
 
 
 <% if mobile? %>
-    <%= javascript_include_tag 'custom/zepto.min.js' %>
-    <%= javascript_include_tag 'custom/slide.js' %>
-    <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js' %>
-    <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
-    <%= javascript_include_tag 'custom/mobile_addedon_js.js' %>
+    <%= javascript_include_tag 'custom/jquery-1.7.1.min.js', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'custom/slide.js', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'custom/zepto.min.js', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js', 'data-turbolinks-track' => true %>
 <% else %>
     <%= javascript_include_tag 'custom/slide.js' %>
     <%= javascript_include_tag 'custom/scrollreveal.min.js' %>

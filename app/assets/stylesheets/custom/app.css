@@ -33,6 +33,7 @@ body{
     width: 3.2rem;
     height: .74rem;
     margin-left: 2.33rem;
+    margin-top: .3rem;
     background-size: cover;
 }
 .header .header_r{
@@ -83,7 +84,7 @@ body{
     height: 1.6rem;
     position: absolute;
     left: 2.6rem;
-    top: 7rem;
+    top: 5rem;
 }
 .circle p{
     font-size: .64rem;
