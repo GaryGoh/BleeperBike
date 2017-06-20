@@ -458,6 +458,7 @@ body{
     width: 3.2rem;
     height: .74rem;
     margin-left: 2.9rem;
+    margin-bottom: .4rem;
     background-size: cover;
 }
 .footer{
@@ -483,10 +484,14 @@ body{
     font-size: .4rem;
     color: #fff;
 }
-.footer_wrap ul li span{
+.footer_wrap ul li a{
     font-size: .32rem;
     color: #fff;
     display: block;
+    text-decoration: none;
+    cursor: pointer;
+    line-height:1;
+    margin-top: .32rem;
 }
 .footer_wrap ul li a:nth-child(1){
     margin-top: 1.06rem;
@@ -494,6 +499,11 @@ body{
 .footer_wrap ul li span:nth-child(2){
     margin-top: .68rem;
 }
+
+.footer_wrap ul li a:hover{
+    color: #bfbfbf;
+}
+
 .footer .ltd{
     font-size: .266rem;
     color: #4e5560;

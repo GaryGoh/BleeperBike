@@ -135,7 +135,7 @@
 
               <p>
                 Register by <br>
-                email or phone<br>
+                email or by phone<br>
                 verification
               </p>
             </div>
@@ -161,7 +161,7 @@
                 Scan the QR <br>
                 Code or enter <br>
                 the BleeperBike ID <br>
-                No.
+                Number
               </p>
             </div>
             <div class="item">
@@ -266,8 +266,8 @@
               <%= image_tag('img/web/parking_v2.png') %>
             </div>
             <div class="rule_morality">
-              <p>It is essential that BleeperBikers <br>
-                respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
+              <p>It is essential that users <br>
+                respect our bike parking rules. See images below for examples of the good, the bad <br>and the ugly!</p>
             </div>
             <div class="rule_img">
               <%= image_tag('img/web/rule_img.png') %>
@@ -489,7 +489,7 @@
               <h3>REGISTER</h3>
 
               <p>
-                Register by email or phone verification
+                Register by email or by phone verification
               </p>
             </div>
             <div class="item swiper-slide">
@@ -507,7 +507,7 @@
               <h3>UNLOCK</h3>
 
               <p>
-                Scan the QR Code or enter the BleeperBike ID No.
+                Scan the QR Code or enter the BleeperBike ID Number
               </p>
             </div>
             <div class="item swiper-slide">
@@ -609,8 +609,8 @@
             <%= image_tag('img/mobile/parking_v2.png') %>
           </div>
           <div class="rule_morality">
-            <p>It is essential that BleeperBikers <br>
-              respect our bike parking rules,see images below for examples of the good,the bad <br>and the ugly!</p>
+            <p>It is essential that users <br>
+              respect our bike parking rules. See images below for examples of the good, the bad <br>and the ugly!</p>
           </div>
           <div class="rule_img">
             <%= image_tag('img/mobile/tuzu.png') %>
@@ -690,13 +690,13 @@
           <div class="bike_logo"></div>
           <ul>
             <li>
-              <strong>LEGAL</strong>
-              <span id="TERM" data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</span>
-              <span data-toggle="modal" data-target="#privacy" style="margin-top: .68rem;" id="POLICY">Privacy&nbspPolicy</span>
+              <strong style="padding-top: 100px;">LEGAL</strong>
+              <a id="TERM" data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</a>
+              <a data-toggle="modal" data-target="#privacy" style="margin-top: .68rem;" id="POLICY">Privacy&nbspPolicy</a>
             </li>
             <li class="useful">
               <strong>USEFUL&nbspLINKS</strong>
-              <span id="FAQ" data-toggle="modal" data-target="#faq">FAQ</span>
+              <a id="FAQ" data-toggle="modal" data-target="#faq">FAQ</a>
             </li>
           </ul>
 
@@ -717,6 +717,7 @@
     <%= javascript_include_tag 'custom/slide.js', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'custom/zepto.min.js', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'custom/mobile_addedon_js.js' %>
 <% else %>
     <%= javascript_include_tag 'custom/slide.js' %>
     <%= javascript_include_tag 'custom/scrollreveal.min.js' %>
