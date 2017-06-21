@@ -88,4 +88,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address: 'smtp.mail.us-west-2.awsapps.com',
+      port: 465,
+      domain: 'bleeperbike.com',
+      user_name: 'mgao@bleeperbike.com',
+      password: 'gmq1990929hEAVEN',
+      authentication: 'plain',
+      enable_starttls_auto: true
+  }
 end

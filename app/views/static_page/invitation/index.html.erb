@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js ">
+
+<head>
+	<meta charset="utf-8">
+	<title>BleeperBike</title>
+	<link rel="shortcut icon" href="#" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <%= javascript_include_tag 'invitation/jquery.min.js', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'invitation/md5.min.js', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'invitation/css.css', media: 'all', 'data-turbolinks-track' => true %>
+
+</head>
+
+<body>
+	<section class="wrapper">
+		<header class="contextual ">
+			<div class="logo"></div>
+		</header>
+
+		<!-- content -->
+		<section class="content ">
+
+			<div class="signup-wrapper">
+
+				<section class="signup-top">
+					<div class="signup-top-images"></div>
+					<div class="signup-top-text">
+						<div class="signup-top-text-title">You got a invitation code.</div>
+						<div class="signup-top-text-subtitle">
+						</div>
+					</div>
+				</section>
+
+				<section class="signup-form">
+					<article class="form-container">
+						<!-- 账户 -->
+						<div class="signup-form-section account">
+							<div class="signup-form-section-title">
+								<p>Account</p>
+							</div>
+							<div class="signup-form-section-required">Required</div>
+							<div class="signup-form-section-number blue">1</div>
+							<div class="signup-form-section-line blue"></div>
+							<div class="form-group required ">
+								<label style="text-align:left" for="email">Email</label>
+								<input type="email" value="" name="email" id="email" placeholder="name@example.com">
+								<div class="error-notice"></div>
+							</div>
+							<div class="form-group">
+								<button id="get-code" type="submit" style="margin-top:" class="btn btn-primary js-submit">Request verification code</button>
+							</div>
+							<div class="form-group required ">
+								<label style="text-align:left" for="code">Verification code</label>
+								<input type="code" value="" name="code" id="code" placeholder="Please enter verification code">
+								<div class="error-notice"></div>
+							</div>
+							<div class="form-group required ">
+								<label style="text-align:left" for="password">Password</label>
+								<input type="password" value="" name="password" id="password" placeholder="Please enter your password">
+								<div class="error-notice"></div>
+							</div>
+						</div>
+						<!-- 账户-end -->
+						<!-- 个人资料 -->
+						<div class="signup-form-section profile">
+
+							<div class="signup-form-section-title">
+								<p>Profile</p>
+							</div>
+							<div class="signup-form-section-number">2</div>
+							<div class="signup-form-section-line"></div>
+
+							<!-- 名称 -->
+							<div class="form-group required ">
+								<label style="text-align:left" for="name">You name</label>
+								<div class="row form-row">
+									<div class="col-md-6 col-xs-6 md-push-right-half sm-push-right-half xs-push-right-half">
+										<input type="text" value="" name="first_name" id="first_name" placeholder="Enter your first name">
+										<div class="error-notice"></div>
+									</div>
+									<div class="col-md-6 col-xs-6 md-push-left-half xs-push-left-half">
+										<input type="text" value="" name="last_name" id="last_name" placeholder="Enter your last name">
+										<div class="error-notice"></div>
+									</div>
+								</div>
+							</div>
+							<!-- 名称-end -->
+
+						</div>
+						<!-- 个人资料-end -->
+						<!--- 邀请码 --->
+						<div class="signup-form-section">
+							<div class="signup-form-section-title">
+								<p>Invitation code</p>
+							</div>
+							
+							<div class="signup-form-section-number blue">3</div>
+							<div class="signup-form-section-line blue"></div>
+							<div class="form-group  ">
+								<label style="text-align:left" for="promotion_code">Invitation Code</label>
+								<input type="text" value="" name="promotion_code" id="promotion_code" placeholder="Invitation Code">
+								<div class="error-notice"></div>
+							</div>
+						</div>
+						<!--- 邀请码-end --->
+						<!--- 注册按钮 --->
+						<div class="signup-form-section submit">
+							<div class="col-md-12">
+								
+								<div class="form-group">
+									<button id="register" type="submit" class="btn btn-primary js-submit disabled" disabled>
+										Sign Up
+									</button>
+								</div>
+								<div class="signup-form-section-notice">
+									Please fill out all required (<span class="star">*</span>) fields.
+								</div>
+							</div>
+							<div class="signup-form-section-number"></div>
+						</div>
+						<!--- 注册按钮-end --->
+						<!--- 条款信息 --->
+						<div class="form-group agree-terms">
+							<p>
+								By clicking "Sign Up", you agree to BleeperBike's <a href=<%= terms_and_conditions_path%>>Terms and Conditions</a>.
+							</p>
+						</div>
+						<!--- 条款信息-end --->
+					</article>
+				</section>
+
+			</div>
+
+			<div class="success-wrapper">
+				<div class="page-title">
+					<h5 class="subtitle border-center no-weight">
+						<span>Sign up successful</span>
+					</h5>
+				</div>
+
+				<div align="center">
+					<a href="https://itunes.apple.com/cn/app/ohbike/id1184230023?l=en&mt=8">
+						<img src="img/iOS.jpg" height="95" width="270" style="text-align:center" />
+					</a>
+				</div>
+				<div align="center">
+					<a href="https://play.google.com/store/apps/details?id=com.ohbike.gesila">
+						<img src="img/Android.jpg" height="95" width="270" style="text-align:center" />
+					</a>
+				</div>
+			</div>
+
+		</section>
+
+	</section>
+
+	<script>
+
+		// ==================== 定义参数 ====================
+		// Api请求地址
+		var baseUrl = "https://en.api.ohbike.com/v1";		
+		// url参数邀请码
+		var parameterCode = "";
+		// url参数AppKey
+		var parameterAppKey = "EqrIpNxCLawfznEdzm5llfIa2ZLqbQ9whfZrokr-d7oU7UfMPq2g9s7CZxmwNV3W";
+
+		var email = "";
+		var code = "";
+		var password = "";
+		var firstName = "";
+		var lastName = "";
+		var promotionCode = "";
+		// ==================================================
+
+		// 获取Url参数
+		function getQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]); return null;
+		};
+
+		// 页面准备好回调
+		window.onload = function() {
+			// 获取邀请码
+			parameterCode = getQueryString("code");
+			// 设置邀请码到输入框
+			$("#promotion_code").val(parameterCode);
+			// 挂载事件
+			addEvents();
+		};
+
+		// 添加事件
+		function addEvents() {
+			$("input").on("keyup", checkInputValueList);
+			$("#get-code").on("click", getCode);
+			$("#register").on("click", function(){
+				console.log("click");
+				register(email, code, password, firstName, lastName, promotionCode);
+			});
+		};
+
+		// 获取验证码请求
+		function getCode() {
+			console.log("getCode");
+			var email = $.trim($("#email").val());
+			var postData = {
+				t: "send",
+				email: email,
+				ak: parameterAppKey,
+				lang: "en-US"
+			};
+			var url = baseUrl + "/verify/";
+			$.ajax({
+				url: url,
+				type: "GET",
+				data: postData,
+				timeout: 15 * 1000,
+				success: function (data) {
+					console.log("success: ");
+					console.log(data);
+					var errorCode = data.errcode;
+					if(errorCode == 0) {
+						alert("Verification code send successful.");
+					}
+					else {
+						alert(data.message);
+					}
+				},
+				error: function (data) {
+					console.log("error: ");
+					console.log(data);
+					alert("Network error.");
+				}
+			});
+		};
+
+		// 检测所有的输入框是否填写完毕
+		function checkInputValueList() {
+			console.log("checkInputValueList");
+			email = $.trim($("#email").val());
+			code = $.trim($("#code").val());
+			password = $.trim($("#password").val());
+			firstName = $.trim($("#first_name").val());
+			lastName = $.trim($("#last_name").val());
+			promotionCode = $.trim($("#promotion_code").val());
+			if(email.length != 0 && code.length != 0 && password.length != 0 && firstName.length != 0 && lastName.length != 0) {
+				console.log(email, code, password, firstName, lastName, promotionCode);
+				$("#register").removeClass("disabled");
+				$("#register").attr("disabled", false);
+			}
+			else {
+				$("#register").addClass("disabled");
+				$("#register").attr("disabled", true);
+				console.log("尚未填写完整");
+			}
+		};
+
+		// 准备注册
+		function register(email, code, password, firstName, lastName, promotionCode) {
+			console.log("register");
+			var postData = {
+				t: "register",
+				email: email,
+				code: code,
+				password: md5(password),
+				first_name: firstName,
+				last_name: lastName,
+				invite_code: promotionCode,
+				ak: parameterAppKey,
+				lang: "en-US"
+			};
+			var url = baseUrl + "/share/";
+			$.ajax({
+				url: url,
+				type: "GET",
+				data: postData,
+				timeout: 15 * 1000,
+				success: function (data) {
+					console.log("success: ");
+					console.log(data);
+					var errorCode = data.errcode;
+					if(errorCode == 0) {
+						changeToSuccess();
+					}
+					else {
+						alert(data.message);
+					}
+				},
+				error: function (data) {
+					console.log("error: ");
+					console.log(data);
+					alert("Network error.");
+				}
+			});
+		};
+
+		// 注册成功，隐藏注册界面，显示下载按钮
+		function changeToSuccess() {
+			$(".signup-wrapper").hide();
+			$(".success-wrapper").show();
+		};
+		
+	</script>
+
+</body>
+
+</html>

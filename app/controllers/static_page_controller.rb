@@ -11,7 +11,15 @@ class StaticPageController < ApplicationController
 
   end
 
-  def app
+  def invitation
+    render 'static_page/invitation/index'
+  end
 
+  def terms_and_conditions
+    render 'static_page/invitation/termsAndConditions'
+  end
+
+  def privacy_policy
+    render 'static_page/invitation/privacyPolicy'
   end
 end
