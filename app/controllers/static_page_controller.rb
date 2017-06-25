@@ -5,6 +5,12 @@ class StaticPageController < ApplicationController
     @lose_credits = CreditType.find_by(credit_type: 'Lose Points').credits
     @copyright = Copyright.first
     @faqs = Faq.all
+
+    if mobile?
+      render 'static_page/mobile_index'
+    else
+      render 'static_page/desktop_index'
+    end
   end
 
   def test
