@@ -58,6 +58,13 @@
   </div>
   <!--loop-->
 
+  <!-- Bleeper news-->
+  <% unless (@news.nil?) %>
+      <%=
+          render 'static_page/sub_section/bleeper_news'
+      %>
+  <% end %>
+
   <div class="banner" id="works">
     <div class="banner_title">
       <h3>HOW&nbspIT&nbspWORKS</h3>
@@ -204,12 +211,7 @@
       <div class="rule_desc">
         <h3>PARKING RULES</h3>
 
-        <p>Please only park Bleeper at designated parking locations</p>
-        <%= image_tag('img/mobile/parking_v2.png') %>
-      </div>
-      <div class="rule_morality">
-        <p>It is essential that users <br>
-          respect our bike parking rules. See images below for examples of the good, the bad <br>and the ugly!</p>
+        <%= image_tag('img/web/parking_rule_v2.png') %>
       </div>
       <div class="rule_img">
         <%= image_tag('img/mobile/tuzu.png') %>

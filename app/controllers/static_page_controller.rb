@@ -5,6 +5,7 @@ class StaticPageController < ApplicationController
     @lose_credits = CreditType.find_by(credit_type: 'Lose Points').credits
     @copyright = Copyright.first
     @faqs = Faq.all
+    @news = Blog.order(:created_at).last()
 
     if mobile?
       render 'static_page/mobile_index'

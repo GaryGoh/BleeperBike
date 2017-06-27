@@ -1,86 +1,30 @@
-<%= stylesheet_link_tag 'custom/appreset.css', media: 'all', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag 'custom/app.css', media: 'all', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag 'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'custom/reset.js', 'data-turbolinks-track' => true %>
 
-
-<div class="banner" id="works">
-  <div class="banner_title">
-    <h3>HOW&nbspIT&nbspWORKS</h3>
-
-    <p>Download the BleeperBike App onto your smart phone</p>
-  </div>
-  <div class="banner_loop">
-    <div class="loop">
-      <div class="loop_box">
-        <div class="slide swiper-container" id="swiper-container1">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide"><%= image_tag('img/mobile/register.png') %></li>
-            <li class="swiper-slide"><%= image_tag('img/mobile/find.png') %></li>
-            <li class="swiper-slide"><%= image_tag('img/mobile/unlock.png') %></li>
-            <li class="swiper-slide"><%= image_tag('img/mobile/ride.png') %></li>
-            <li class="swiper-slide"><%= image_tag('img/mobile/lock.png') %></li>
-          </ul>
-          <div class="swiper-pagination" style="display:none"></div>
-        </div>
-      </div>
+<!-- Full Width Image Header -->
+<header class="header-image">
+  <div class="headline">
+    <div class="container">
+      <h1>One Page Wonder</h1>
+      <h2>Will Knock Your Socks Off</h2>
     </div>
   </div>
-  <div class="banner_desc swiper-container" id="swiper-container2">
-    <div class="slide_box swiper-wrapper">
-      <div class="item swiper-slide">
-        <!--<em class="line"></em>-->
-        <!--<div class="loop_bg bg01"></div>-->
-        <h3>REGISTER</h3>
+</header>
 
-        <p>
-          Register by email or phone verification
-        </p>
-      </div>
-      <div class="item swiper-slide">
-        <!--<em class="line"></em>
-        <div class="loop_bg bg02"></div>-->
-        <h3>FIND</h3>
+<!-- Page Content -->
+<div class="container">
 
-        <p>
-          When you open the app all bikes near you will be displayed
-        </p>
-      </div>
-      <div class="item swiper-slide">
-        <!--<em class="line"></em>-->
-        <!--<div class="loop_bg bg03"></div>-->
-        <h3>UNLOCK</h3>
+  <hr class="featurette-divider">
 
-        <p>
-          Scan the QR Code or enter the BleeperBike ID No.
-        </p>
-      </div>
-      <div class="item swiper-slide">
-        <!--<em class="line"></em>-->
-        <!--<div class="loop_bg bg04"></div>-->
-        <h3>RIDE</h3>
-
-        <p>
-          Enjoy you ride AND always obey the rules of the road
-        </p>
-      </div>
-      <div class="item swiper-slide">
-        <!--<em class="line"></em>-->
-        <!--<div class="loop_bg bg05"></div>-->
-        <h3>LOCK</h3>
-
-        <p>
-          Push Smart lock lever to lock Bleeper.
-        </p>
-      </div>
-    </div>
-    <div class="swiper-pagination" style="bottom:0"></div>
+  <!-- First Featurette -->
+  <div class="featurette" id="about">
+    <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+    <h2 class="featurette-heading">This First Heading
+      <span class="text-muted">Will Catch Your Eye</span>
+    </h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
   </div>
+
+  <hr class="featurette-divider">
+
+
 </div>
-
-<%= javascript_include_tag 'custom/jquery-1.7.1.min.js', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'custom/slide.js', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'custom/zepto.min.js', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'custom/mobile_addedon_js.js', 'data-turbolinks-track' => true %>
-
+<!-- /.container -->
