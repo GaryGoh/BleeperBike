@@ -91,6 +91,4 @@ for (var i = 0; i < Goindex.length; i++) {
 //				console.log(hover[i])
     console.log(index);
 //
-}/**
- * Created by GaryGoh on 2017/06/05.
- */
+}
