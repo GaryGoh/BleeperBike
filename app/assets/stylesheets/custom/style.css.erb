@@ -70,10 +70,15 @@ body,html{
     overflow: hidden;
     margin: 0 auto;
     background: url(<%= asset_path 'img/web/ip.png' %>) no-repeat center;
-
     font-size: 0;
     height: 658px;
     position: relative;
+
+    zoom: 0.9;
+    -ms-zoom: 0.9;
+    -webkit-zoom: 0.9;
+    -moz-transform:  scale(0.9,0.9);
+    -moz-transform-origin: left center;
 }
 .loop .loop_box{
     width: 282px;
@@ -88,43 +93,71 @@ body,html{
     position: absolute;
     left: 0;
     top: 0;
+
 }
 .banner_loop .loop ul{
     width: 1974px;
     margin: 0 auto;
     height: 658px;
     overflow: hidden;
+
 }
 .loop ul li{float: left;}
 .loop_btn .item p{
     line-height: 30px;
     color: #909090;
     padding-top: 16px;
+    font-family: 'Muli', sans-serif;
 }
 .loop_btn .item h3{
     font-size: 28px;
     color: #434343;
     margin-top: 50px;
+    font-family: 'Muli', sans-serif;
 }
 /*loop*/
 .line{
     background: url(<%= asset_path 'img/web/dotted.png' %>) no-repeat center;
-    width: 86px;
+    width: 90px;
     height: 18px;
     display: inline-block;
     position: absolute;
-    right: -60px;
+    right: -160px;
     top: 45px;
 }
 .loop_bg{width:100px;height:100px;margin-left:37px;}
-.loop_btn{overflow:hidden;margin-top: 117px;}
+.loop_btn{overflow:hidden;margin-top: 60px;}
 .loop_btn .item{
-    width: 190px;
+    width: 80px;
     /*height: 294px;*/
     position: relative;
     float: left;
     text-align: center;
-    margin-left: 45px;
+    margin-left: 140px;
+
+    zoom: 0.9;
+    -ms-zoom: 0.9;
+    -webkit-zoom: 0.9;
+    -moz-transform:  scale(0.9,0.9);
+    -moz-transform-origin: left center;
+
+}
+
+.loop_btn .item h3 {
+    font-size: 19px;
+    color: #000;
+    margin-bottom: 8px;
+    width: 165px;
+
+}
+
+.loop_btn .item p {
+    text-align: center;
+    font-size: 14px;
+    color: #939393;
+    /*line-height: 1.4;*/
+    /*font-weight: 700;*/
+    width: 165px;
 }
 .item .icon001{background:url(<%= asset_path 'img/web/icon01.png' %>) no-repeat center}
 .item .icon002{background:url(<%= asset_path 'img/web/icon02.png' %>) no-repeat center}

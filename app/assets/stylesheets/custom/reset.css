@@ -23,6 +23,8 @@ html, body, div, span, object, iframe, h1, h2, h5, h6, blockquote, pre, abbr, ad
     font-weight: normal;
     vertical-align: baseline;
     background: transparent;
+    font-family: 'Muli', sans-serif;
+
 }
 
 article, aside, figure, footer, header, nav, section, details, summary {display: block;}
@@ -53,7 +55,9 @@ blockquote:after,
 q:before,
 q:after {content: ''; content: none;}
 
-a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;text-decoration: none;outline: none;}
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;text-decoration: none;outline: none;
+    font-family: 'Muli', sans-serif;
+}
 
 del {text-decoration: line-through;}
 
@@ -145,7 +149,7 @@ input[type=button] {width: auto; overflow: visible;}
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-user-select: none;
     -webkit-user-drag: none;
-    font-family: arial,sans-serif;
+     font-family: 'Muli', sans-serif;
 }
 
 .color-grey{
