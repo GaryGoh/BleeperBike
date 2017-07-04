@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     request.user_agent =~ /\b(Android|iPhone|iPad|Windows Phone|Opera Mobi|Kindle|BlackBerry|PlayBook)\b/i
   end
 
+  def tablet # has to be in here because it has access to "request"
+    request.user_agent =~ /\b(iPad|Kindle|iPad|Galaxy Tab|Galaxy Nexus 7|PlayBook)\b/i
+  end
+
   def ios?
     request.user_agent =~ /\b(iPhone|iPad)\b/i
   end
@@ -17,6 +21,6 @@ class ApplicationController < ActionController::Base
   end
 
   def getDevice
-    UserAgent.parse(request.user_agent).platform
+    UserAgent.parse(request.user_agent)
   end
 end

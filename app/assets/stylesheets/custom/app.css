@@ -29,10 +29,10 @@ body{
     background-size: cover;
 }
 .logo{
-    background: url("../img/web/logo_v2.png") no-repeat center;
-    width: 3.5rem;
-    height: .76rem;
-    margin-left: 1.3rem;
+    background: url("../img/web/logo_v3.png") no-repeat center;
+    width: 4.0rem;
+    height: .96rem;
+    margin-left: 1.0rem;
     margin-top: .3rem;
     background-size: cover;
 }
@@ -454,7 +454,7 @@ body{
 }
 /*footer*/
 .bike_logo{
-    background: url("../img/mobile/logo.png") no-repeat center;
+    background: url("../img/mobile/logo_v3.png") no-repeat center;
     width: 3.2rem;
     height: .74rem;
     margin-left: 2.9rem;

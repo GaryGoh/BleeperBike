@@ -7,7 +7,7 @@ class StaticPageController < ApplicationController
     @faqs = Faq.all
     @news = Blog.order(:created_at).last()
 
-    if mobile?
+    if mobile? and !tablet
       render 'static_page/mobile_index'
     else
       render 'static_page/desktop_index'
