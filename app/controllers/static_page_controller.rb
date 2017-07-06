@@ -1,10 +1,10 @@
 class StaticPageController < ApplicationController
   def index
-    @payments = PaymentOption.all
-    @gain_credits = CreditType.find_by(credit_type: 'Gain Points').credits
-    @lose_credits = CreditType.find_by(credit_type: 'Lose Points').credits
+    @payments = PaymentOption.all.order('priority')
+    @gain_credits = CreditType.find_by(credit_type: 'Gain Points').credits.order('priority')
+    @lose_credits = CreditType.find_by(credit_type: 'Lose Points').credits.order('priority')
     @copyright = Copyright.first
-    @faqs = Faq.all
+    @faqs = Faq.all.order('priority')
     @news = Blog.order(:created_at).last()
 
     if mobile? and !tablet
