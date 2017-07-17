@@ -39,9 +39,9 @@
 
   <!--top_background-img-->
   <div class="header_bg" id="top">
-    <%= image_tag('img/web/banner_v2.jpg') %>
+    <%= image_tag('img/web/banner_v3.png') %>
     <div class="circle sr-slogan">
-      <p>Hassle-Free<br><font style="color: #ff7001;">Bike Rental</font></p>
+      <p>App Powered<br>Bike Sharing</p>
     </div>
   </div>
 
@@ -216,7 +216,8 @@
           <%= image_tag('img/web/parking_rule_v2.png') %>
         </div>
         <div class="rule_morality">
-          <p>It is essential that users respect our bike parking rules. See images below for examples of the good, the bad and the ugly!</p>
+          <p>It is essential that users respect our bike parking rules. See images below for examples of the good, the
+            bad and the ugly!</p>
         </div>
         <div class="rule_img">
           <%= image_tag('img/web/parking_rule_web.png') %>
@@ -322,7 +323,18 @@
         </ul>
       </div>
       <div style="padding-bottom: 10%;">
-        <p class="col-lg-12"><%= @copyright.context %></p>
+        <p style="bottom: 4em;" class="col-lg-12">
+          <a href="https://www.facebook.com/BleeperBike/" class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </a>
+          <a href="" class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </a>
+        </p>
+        <p class="col-lg-12"><%= @copyright.context %>
+        </p>
       </div>
     </div>
   </footer>

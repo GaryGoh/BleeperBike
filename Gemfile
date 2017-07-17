@@ -50,6 +50,7 @@ gem 'useragent'
 
 gem 'gmaps4rails'
 gem 'gmaps-autocomplete-rails'
+gem 'font-awesome-rails'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
