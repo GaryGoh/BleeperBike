@@ -48,13 +48,6 @@
 
   <br><br><br><br>
 
-  <!-- Bleeper news-->
-  <% unless (@news.nil?) %>
-      <%=
-          render 'static_page/sub_section/bleeper_news'
-      %>
-  <% end %>
-
   <!-- How it works-->
   <div id="works"></div>
   <div class="main">
@@ -142,6 +135,18 @@
       </div>
     </div>
 
+    </br>
+    </br>
+    </br>
+
+    <!-- Bleeper news-->
+    <% unless (@news.nil?) %>
+        <%=
+            render 'static_page/sub_section/bleeper_news'
+        %>
+    <% end %>
+
+
     <!--bleeperbike-->
     <div class="bleeper" id="meet">
       <div class="bleeper_box">
@@ -205,7 +210,6 @@
         </div>
       </div>
     </div>
-
 
     <!--parking_rules-->
     <div id="rules"></div>

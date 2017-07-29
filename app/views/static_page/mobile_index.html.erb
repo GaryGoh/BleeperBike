@@ -57,12 +57,6 @@
   </div>
   <!--loop-->
 
-  <!-- Bleeper news-->
-  <% unless (@news.nil?) %>
-      <%=
-          render 'static_page/sub_section/bleeper_news'
-      %>
-  <% end %>
 
   <div class="banner" id="works">
     <div class="banner_title">
@@ -137,6 +131,17 @@
       <div class="swiper-pagination" style="bottom:0"></div>
     </div>
   </div>
+
+  </br>
+  </br>
+  </br>
+
+  <!-- Bleeper news-->
+  <% unless (@news.nil?) %>
+      <%=
+          render 'static_page/sub_section/bleeper_news'
+      %>
+  <% end %>
 
   <!--meet-->
   <div class="meet">
