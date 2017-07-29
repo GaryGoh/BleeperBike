@@ -8,7 +8,7 @@
   <div class="header_wrap navbar navbar-default navbar-fixed-top">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -21,15 +21,17 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="col-sm-8 collapse navbar-collapse" id="bp-nav-trigger">
+      <div class="col-sm-9 collapse navbar-collapse" id="bp-nav-trigger">
         <ul class="nav navbar-nav">
           <li><a href="#top">Home</a></li>
+          <% unless (@news.nil?) %>
+              <li><a href="#bleepernews">Bleeper&nbspNews</a></li>
+          <% end %>
           <li><a href="#works">How&nbspit&nbspWorks</a></li>
           <li><a href="#rules">Parking&nbspRules</a></li>
           <li><a href="#price">Price</a></li>
           <li><a href="#download">Download</a></li>
           <li><a href="mailto:sayhello@bleeperbike.com">Contact Us</a></li>
-
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -41,12 +43,20 @@
   <div class="header_bg" id="top">
     <%= image_tag('img/web/banner_v3.png') %>
     <!--<div class="circle sr-slogan">-->
-      <!--<p>App Powered<br>Bike Sharing</p>-->
+    <!--<p>App Powered<br>Bike Sharing</p>-->
     <!--</div>-->
   </div>
 
+  <div id="bleepernews"></div>
 
   <br><br><br><br>
+
+  <!-- Bleeper news-->
+  <% unless (@news.nil?) %>
+      <%=
+          render 'static_page/sub_section/bleeper_news'
+      %>
+  <% end %>
 
   <!-- How it works-->
   <div id="works"></div>
@@ -135,18 +145,6 @@
       </div>
     </div>
 
-    </br>
-    </br>
-    </br>
-
-    <!-- Bleeper news-->
-    <% unless (@news.nil?) %>
-        <%=
-            render 'static_page/sub_section/bleeper_news'
-        %>
-    <% end %>
-
-
     <!--bleeperbike-->
     <div class="bleeper" id="meet">
       <div class="bleeper_box">
@@ -210,6 +208,7 @@
         </div>
       </div>
     </div>
+
 
     <!--parking_rules-->
     <div id="rules"></div>
@@ -337,6 +336,7 @@
             <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
           </a>
         </p>
+
         <p class="col-lg-12"><%= @copyright.context %>
         </p>
       </div>

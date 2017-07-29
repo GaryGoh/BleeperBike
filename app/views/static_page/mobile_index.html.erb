@@ -27,6 +27,9 @@
       <div class="col-sm-7 collapse navbar-collapse" id="bp-nav-trigger">
         <ul class="nav navbar-nav">
           <li><a href="#top">Home</a></li>
+          <% unless (@news.nil?) %>
+              <li><a href="#bleepernews">Bleeper&nbspNews</a></li>
+          <% end %>
           <li><a href="#works">How&nbspit&nbspWorks</a></li>
           <li><a href="#rules">Parking&nbspRules</a></li>
           <li><a href="#price">Price</a></li>
@@ -52,11 +55,20 @@
   <div class="header_bg">
     <%= image_tag('img/mobile/banner_v3.png') %>
     <!--<div class="circle sr-slogan">-->
-      <!--<p>App Powered<br>Bike Sharing</p>-->
+    <!--<p>App Powered<br>Bike Sharing</p>-->
     <!--</div>-->
   </div>
   <!--loop-->
-
+  <div id="bleepernews"></div>
+  </br>
+  </br>
+  </br>
+  <!-- Bleeper news-->
+  <% unless (@news.nil?) %>
+      <%=
+          render 'static_page/sub_section/bleeper_news'
+      %>
+  <% end %>
 
   <div class="banner" id="works">
     <div class="banner_title">
@@ -131,17 +143,6 @@
       <div class="swiper-pagination" style="bottom:0"></div>
     </div>
   </div>
-
-  </br>
-  </br>
-  </br>
-
-  <!-- Bleeper news-->
-  <% unless (@news.nil?) %>
-      <%=
-          render 'static_page/sub_section/bleeper_news'
-      %>
-  <% end %>
 
   <!--meet-->
   <div class="meet">
