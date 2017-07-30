@@ -1,7 +1,11 @@
 <!-- Project One -->
-<div class="container">
+<div class="container" align="center">
   <h3 align="center"> BLEEPER NEWS</h3>
-  <br><br><br>
+  <% if mobile? %>
+      <br>
+  <% else %>
+      <br><br><br>
+  <% end %>
   <!-- First Featurette -->
   <div class="featurette" id="about">
     <% unless @news.image_url.nil? or @news.image_url == "" %>
