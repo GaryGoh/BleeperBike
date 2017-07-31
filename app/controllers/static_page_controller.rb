@@ -15,6 +15,7 @@ class StaticPageController < ApplicationController
   end
 
   def test
+    @payments = PaymentOption.all.order('priority')
 
   end
 
