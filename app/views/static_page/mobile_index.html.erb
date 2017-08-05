@@ -52,8 +52,27 @@
   </div>
 
 
-  <div class="header_bg">
-    <%= image_tag('img/mobile/banner_v3.png') %>
+  <div class="">
+    <!--<div style="padding-top: 50px;">-->
+    <%= image_tag('img/mobile/mobile.png') %>
+    <!--</div>-->
+
+    <div class="circle col-md-12">
+      <% if ios? %>
+          <div class="col-md-6">
+            <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
+              <%= image_tag('img/web/app_store.png') %>
+            </a>
+          </div>
+      <% else %>
+          <div class="col-md-6">
+            <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
+              <%= image_tag('img/web/google_play.png', height: '60') %>
+            </a>
+          </div>
+      <% end %>
+    </div>
+
     <!--<div class="circle sr-slogan">-->
     <!--<p>App Powered<br>Bike Sharing</p>-->
     <!--</div>-->
@@ -212,16 +231,18 @@
   <div class="parkingRules" id="rules">
     <div class="parking_wrap">
       <div class="rule_desc">
-        <h3>PARKING RULES</h3>
+        <!--<h3>PARKING RULES</h3>-->
 
-        <%= image_tag('img/web/parking_rule_v2.png') %>
+        <%= image_tag('img/mobile/mobile_ride.png') %>
       </div>
       <div class="rule_morality">
-        <p>It is essential that users respect our bike parking rules. See images below for examples of the good, the bad
-          and the ugly!</p>
+        <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the bad-->
+        <!--and the ugly!</p>-->
       </div>
       <div class="rule_img">
-        <%= image_tag('img/mobile/parking_rules_mobile.png') %>
+        <%=
+            # image_tag('img/mobile/parking_rules_mobile.png')
+        %>
       </div>
     </div>
     <!--<div class="rule_design">-->
@@ -235,63 +256,9 @@
     <!--<div class="price_mtline">-->
     <!--<img src="" alt="">-->
     <!--</div>-->
-    <h3>PRICE</h3>
-
-    <div class="price_wrap">
-      <div class="price_fee">
-        <div class="price_t">
-          <%= image_tag('img/mobile/PayAsYouGo.png') %>
-        </div>
-        <div class="price_fee_box">
-          <% @payments.each do |payment| %>
-              <p class=""><%= payment.clause %></p>
-              <br>
-          <% end %>
-        </div>
-        <div class="price_i">
-          <%= image_tag('img/mobile/pay2.png') %>
-        </div>
-      </div>
-      <!--<div class="price_i">-->
-      <!--<img src="__PUBLIC__/home/img/mobile/pay.png" alt="">-->
-      <!--</div>-->
-      <div class="price_credit">
-        <div class="price_credit_wrap">
-          <div class="credit_l">
-            <div class="credit_l_img">
-              <%= image_tag('img/mobile/creditl.png') %>
-            </div>
-            <div class="credit_wrap">
-              <p>Gain Points</p>
-              <ul style="height:4rem;overflow-y: scroll">
-                <% @gain_credits.each do |gain| %>
-                    <li>
-                      <span class="credit_descr"><%= gain.clause %></span>
-                      <span class="credit_countr"><%= gain.point_text %></span>
-                    </li>
-                <% end %>
-              </ul>
-            </div>
-          </div>
-          <div class="credit_r">
-            <div class="credit_r_img">
-              <%= image_tag('img/mobile/creditl.png') %>
-            </div>
-            <div class="credit_wrap">
-              <p>Lose Points</p>
-              <ul style="height:4rem;overflow-y: scroll">
-                <% @lose_credits.each do |lose| %>
-                    <li>
-                      <span class="credit_descr"><%= lose.clause %></span>
-                      <span class="credit_countr"><%= lose.point_text %></span>
-                    </li>
-                <% end %>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%=
+        image_tag('img/mobile/mobile_payment.png')
+    %>
   </div>
   <div class="footer">
     <div class="footer_wrap">

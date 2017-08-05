@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @bleeper_parking_slot.address %>
+</p>
+
+<p>
+  <strong>Address line1:</strong>
+  <%= @bleeper_parking_slot.address_line1 %>
+</p>
+
+<p>
+  <strong>Address line2:</strong>
+  <%= @bleeper_parking_slot.address_line2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @bleeper_parking_slot.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @bleeper_parking_slot.country %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @bleeper_parking_slot.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @bleeper_parking_slot.latitude %>
+</p>
+
+<%= link_to 'Edit', edit_bleeper_parking_slot_path(@bleeper_parking_slot) %> |
+<%= link_to 'Back', bleeper_parking_slots_path %>

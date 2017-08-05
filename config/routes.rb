@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bleeper_parking_slots
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :faqs

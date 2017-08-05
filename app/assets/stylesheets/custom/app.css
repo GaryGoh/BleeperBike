@@ -80,11 +80,11 @@ body{
 	top: -1rem;
 }
 .circle{
-    width: 5.48rem;
-    height: 1.6rem;
+    width: 6.48rem;
+    height: 2.5rem;
     position: absolute;
     left: 0.5rem;
-    top: 2.5rem;
+    top: 11.5rem;
 }
 .circle p{
     font-size: .64rem;

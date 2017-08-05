@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bleeper Parking Slots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Address line1</th>
+      <th>Address line2</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bleeper_parking_slots.each do |bleeper_parking_slot| %>
+      <tr>
+        <td><%= bleeper_parking_slot.address %></td>
+        <td><%= bleeper_parking_slot.address_line1 %></td>
+        <td><%= bleeper_parking_slot.address_line2 %></td>
+        <td><%= bleeper_parking_slot.city %></td>
+        <td><%= bleeper_parking_slot.country %></td>
+        <td><%= bleeper_parking_slot.longitude %></td>
+        <td><%= bleeper_parking_slot.latitude %></td>
+        <td><%= link_to 'Show', bleeper_parking_slot %></td>
+        <td><%= link_to 'Edit', edit_bleeper_parking_slot_path(bleeper_parking_slot) %></td>
+        <td><%= link_to 'Destroy', bleeper_parking_slot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bleeper Parking Slot', new_bleeper_parking_slot_path %>

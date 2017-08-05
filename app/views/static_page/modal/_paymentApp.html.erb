@@ -1,0 +1,57 @@
+<h3>PRICE</h3>
+
+<div class="price_wrap">
+  <div class="price_fee">
+    <div class="price_t">
+      <%= image_tag('img/mobile/PayAsYouGo.png') %>
+    </div>
+    <div class="price_fee_box">
+      <% @payments.each do |payment| %>
+          <p class=""><%= payment.clause %></p>
+          <br>
+      <% end %>
+    </div>
+    <div class="price_i">
+      <%= image_tag('img/mobile/pay2.png') %>
+    </div>
+  </div>
+  <!--<div class="price_i">-->
+  <!--<img src="__PUBLIC__/home/img/mobile/pay.png" alt="">-->
+  <!--</div>-->
+  <div class="price_credit">
+    <div class="price_credit_wrap">
+      <div class="credit_l">
+        <div class="credit_l_img">
+          <%= image_tag('img/mobile/creditl.png') %>
+        </div>
+        <div class="credit_wrap">
+          <p>Gain Points</p>
+          <ul style="height:4rem;overflow-y: scroll">
+            <% @gain_credits.each do |gain| %>
+                <li>
+                  <span class="credit_descr"><%= gain.clause %></span>
+                  <span class="credit_countr"><%= gain.point_text %></span>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="credit_r">
+        <div class="credit_r_img">
+          <%= image_tag('img/mobile/creditl.png') %>
+        </div>
+        <div class="credit_wrap">
+          <p>Lose Points</p>
+          <ul style="height:4rem;overflow-y: scroll">
+            <% @lose_credits.each do |lose| %>
+                <li>
+                  <span class="credit_descr"><%= lose.clause %></span>
+                  <span class="credit_countr"><%= lose.point_text %></span>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<%= form_with(model: bleeper_parking_slot, local: true) do |form| %>
+  <% if bleeper_parking_slot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bleeper_parking_slot.errors.count, "error") %> prohibited this bleeper_parking_slot from being saved:</h2>
+
+      <ul>
+      <% bleeper_parking_slot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :bleeper_parking_slot_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address_line1 %>
+    <%= form.text_field :address_line1, id: :bleeper_parking_slot_address_line1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address_line2 %>
+    <%= form.text_field :address_line2, id: :bleeper_parking_slot_address_line2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :bleeper_parking_slot_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country, id: :bleeper_parking_slot_country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :bleeper_parking_slot_longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :bleeper_parking_slot_latitude %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

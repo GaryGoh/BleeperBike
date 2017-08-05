@@ -19,6 +19,9 @@ class StaticPageController < ApplicationController
 
   end
 
+
+
+
   def invitation
     render 'static_page/invitation/index'
   end

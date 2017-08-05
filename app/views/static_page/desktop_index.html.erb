@@ -41,17 +41,17 @@
 
   <!--top_background-img-->
   <div class="header_bg" id="top">
-    <%= image_tag('img/web/banner_v3.png') %>
+    <%= image_tag('img/web/web.png') %>
 
     <div class="circle sr-slogan col-md-8">
       <div class="col-md-3">
         <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
-          <%= image_tag('img/web/ios_download.png') %>
+          <%= image_tag('img/web/app_store.png', height: '60') %>
         </a>
       </div>
       <div class="col-md-3">
         <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
-          <%= image_tag('img/web/android_download.png') %>
+          <%= image_tag('img/web/google_play.png', height: '60') %>
         </a>
       </div>
     </div>
@@ -229,80 +229,38 @@
     <div class="parkingRules">
       <div class="parking_wrap">
         <div class="rule_desc">
-          <h3>PARKING RULES</h3>
-          <%= image_tag('img/web/parking_rule_v2.png') %>
+          <!--<h3>PARKING RULES</h3>-->
+          <%= image_tag('img/web/park1.png') %>
         </div>
         <div class="rule_morality">
-          <p>It is essential that users respect our bike parking rules. See images below for examples of the good, the
-            bad and the ugly!</p>
+        <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the-->
+        <!--bad and the ugly!</p>-->
         </div>
         <div class="rule_img">
-          <%= image_tag('img/web/parking_rule_web.png') %>
+        <%=
+            # image_tag('img/web/parking_rule_web.png')
+        %>
         </div>
-      </div>
-      <div class="rule_design">
-        <%= image_tag('img/web/rule_design.png') %>
+
       </div>
     </div>
-
+    <div class="rule_design">
+      <%=
+          image_tag('img/web/rule_design.png')
+      %>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
     <!--price-->
     <div id="price"></div>
-    <div class="price">
-      <h3>PRICE</h3>
+    <%=
+        image_tag('img/web/payment2.png')
+    %>
 
-      <div class="price_fee">
-        <div class="price_fee_wrap">
-          <div class="price_fee_box">
-            <% @payments.each do |payment| %>
-                <p class=""><%= payment.clause %></p>
-                <br>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      <div class="price_credit">
-        <div class="price_credit_wrap">
-          <div class="credit_l">
-            <div class="credit_wrap">
-              <div style="overflow: hidden">
-                <p style="height:30px;">Gain Points</p>
-
-                <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
-              </div>
-              <div style="height:280px;overflow-y:scroll" class="scroll">
-                <ul>
-                  <% @gain_credits.each do |gain| %>
-                      <li>
-                        <span class="credit_descr"><%= gain.clause %></span>
-                        <span class="credit_countr"><%= gain.point_text %></span>
-                      </li>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="credit_r">
-            <div class="credit_wrap">
-              <div style="overflow: hidden">
-                <p style="height:30px">Lose Points</p>
-
-                <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
-              </div>
-              <div style="height:280px;overflow-y:scroll">
-                <ul>
-                  <% @lose_credits.each do |lose| %>
-                      <li>
-                        <span class="credit_descr"><%= lose.clause %></span>
-                        <span class="credit_countr"><%= lose.point_text %></span>
-                      </li>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!--download-->
     <div class="download" id="download">
       <h3>DOWNLOAD</h3>
