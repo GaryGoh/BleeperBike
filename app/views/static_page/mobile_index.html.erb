@@ -31,16 +31,15 @@
           <% unless (@news.nil?) %>
               <li><a href="#bleepernews">Bleeper&nbspNews</a></li>
           <% end %>
-          <li><a href="#works">How&nbspit&nbspWorks</a></li>
-          <li><a href="#rules">Parking&nbspRules</a></li>
-          <li><a href="#price">Price</a></li>
+          <li><a href="#works">Ride a Bleeper</a></li>
+          <li><a href="#rules">Parking Steps</a></li>
+          <li><a href="#price">Payment Options & Rewards</a></li>
           <li><a href="mailto:sayhello@bleeperbike.com">Contact Us</a></li>
           <% if ios? %>
               <li><a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download</a>
               </li>
           <% elsif android? %>
               <li><a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">Download</a></li>
-
           <% else %>
               <li><a href="">We don't support you device - <%= getDevice %></a></li>
           <% end %>
@@ -58,17 +57,17 @@
     <%= image_tag('img/mobile/mobile.png') %>
     <!--</div>-->
 
-    <div class="circle col-md-12">
+    <div class="circle header_bg col-md-12">
       <% if ios? %>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
               <%= image_tag('img/web/app_store.png') %>
             </a>
           </div>
       <% else %>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
-              <%= image_tag('img/web/google_play.png', height: '60') %>
+              <%= image_tag('img/web/google_play.png') %>
             </a>
           </div>
       <% end %>
@@ -88,7 +87,8 @@
       %>
   <% end %>
 
-  <div class="banner" id="works">
+  <div class="banner" id="works" align="center">
+    <h3>RIDE A BLEEPER</h3>
     <%= image_tag('img/mobile/mobile_ride.png') %>
   </div>
 
@@ -162,10 +162,8 @@
   <div class="parkingRules" id="rules">
     <div class="parking_wrap">
       <div class="rule_desc">
-        <!--<h3>PARKING RULES</h3>-->
-
+        <h3>PARKING STEPS</h3>
         <%= image_tag('img/mobile/mobile_parking_steps.png') %>
-
       </div>
       <div class="rule_morality">
         <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the bad-->
@@ -188,6 +186,7 @@
     <!--<div class="price_mtline">-->
     <!--<img src="" alt="">-->
     <!--</div>-->
+    <h3>PAYMENT OPTIONS & REWARDS</h3>
     <%=
         image_tag('img/mobile/mobile_payment.png')
     %>

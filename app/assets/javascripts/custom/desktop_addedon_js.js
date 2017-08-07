@@ -13,7 +13,7 @@ $(document).ready(function () {
     window.onscroll = function () {
         var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 //            console.log(scrollTop);
-        if (scrollTop >= 1950) {
+        if (scrollTop >= 1650) {
             $('.lineBox>li>p').show(100);
             $('.led_cover').show(700);
             $('.brake_cover').show(700);
@@ -21,14 +21,6 @@ $(document).ready(function () {
             $('.seat_cover').show(700);
             $('.gps_cover').show(700);
             $('.built_cover').show(700);
-        } else if (scrollTop <= 1250 || scrollTop >= 2650) {
-            $('.lineBox>li>p').hide(100);
-            $('.led_cover').hide(700);
-            $('.brake_cover').hide(700);
-            $('.hub_cover').hide(700);
-            $('.seat_cover').hide(700);
-            $('.gps_cover').hide(700);
-            $('.built_cover').hide(700);
         }
     };
     window.sr = ScrollReveal();
