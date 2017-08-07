@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   if Rails.env.development?
     get '/test', to: 'static_page#test'
+    get '/navtest', to: 'static_page#navtest'
   end
 
 end

@@ -1,0 +1,56 @@
+<div class="price">
+  <h3>PRICE</h3>
+
+  <div class="price_fee">
+    <div class="price_fee_wrap">
+      <div class="price_fee_box">
+        <% @payments.each do |payment| %>
+            <p class=""><%= payment.clause %></p>
+            <br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="price_credit">
+    <div class="price_credit_wrap">
+      <div class="credit_l">
+        <div class="credit_wrap">
+          <div style="overflow: hidden">
+            <p style="height:30px;">Gain Points</p>
+
+            <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
+          </div>
+          <div style="height:280px;overflow-y:scroll" class="scroll">
+            <ul>
+              <% @gain_credits.each do |gain| %>
+                  <li>
+                    <span class="credit_descr"><%= gain.clause %></span>
+                    <span class="credit_countr"><%= gain.point_text %></span>
+                  </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="credit_r">
+        <div class="credit_wrap">
+          <div style="overflow: hidden">
+            <p style="height:30px">Lose Points</p>
+
+            <div style="height:1px;width:100%;background:#cb8451;overflow:hidden;margin-top:10px;"></div>
+          </div>
+          <div style="height:280px;overflow-y:scroll">
+            <ul>
+              <% @lose_credits.each do |lose| %>
+                  <li>
+                    <span class="credit_descr"><%= lose.clause %></span>
+                    <span class="credit_countr"><%= lose.point_text %></span>
+                  </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@
 <%= stylesheet_link_tag 'custom/app.css', media: 'all', 'data-turbolinks-track' => true %>
 <%= stylesheet_link_tag 'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'custom/reset.js', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
 
 <div id="container">
   <!--header-nav-->
@@ -88,77 +89,7 @@
   <% end %>
 
   <div class="banner" id="works">
-    <div class="banner_title">
-      <h3>HOW&nbspIT&nbspWORKS</h3>
-
-      <p>Download the BleeperBike App onto your smart phone</p>
-    </div>
-    <div class="banner_loop">
-      <div class="loop">
-        <div class="loop_box">
-          <div class="slide swiper-container" id="swiper-container1">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide"><%= image_tag('img/mobile/register.png') %></li>
-              <li class="swiper-slide"><%= image_tag('img/mobile/find_v2.png') %></li>
-              <li class="swiper-slide"><%= image_tag('img/mobile/unlock_v2.png') %></li>
-              <li class="swiper-slide"><%= image_tag('img/mobile/ride.png') %></li>
-              <li class="swiper-slide"><%= image_tag('img/mobile/lock_v2.png') %></li>
-            </ul>
-            <div class="swiper-pagination" style="display:none"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="banner_desc swiper-container" id="swiper-container2">
-      <div class="slide_box swiper-wrapper">
-        <div class="item swiper-slide">
-          <!--<em class="line"></em>-->
-          <!--<div class="loop_bg bg01"></div>-->
-          <h3>REGISTER</h3>
-
-          <p>
-            Register by email or by phone verification
-          </p>
-        </div>
-        <div class="item swiper-slide">
-          <!--<em class="line"></em>
-          <div class="loop_bg bg02"></div>-->
-          <h3>FIND</h3>
-
-          <p>
-            When you open the app all bikes near you will be displayed
-          </p>
-        </div>
-        <div class="item swiper-slide">
-          <!--<em class="line"></em>-->
-          <!--<div class="loop_bg bg03"></div>-->
-          <h3>UNLOCK</h3>
-
-          <p>
-            Scan the QR Code or enter the BleeperBike ID Number
-          </p>
-        </div>
-        <div class="item swiper-slide">
-          <!--<em class="line"></em>-->
-          <!--<div class="loop_bg bg04"></div>-->
-          <h3>RIDE</h3>
-
-          <p>
-            Enjoy you ride AND always obey the rules of the road
-          </p>
-        </div>
-        <div class="item swiper-slide">
-          <!--<em class="line"></em>-->
-          <!--<div class="loop_bg bg05"></div>-->
-          <h3>LOCK</h3>
-
-          <p>
-            Push Smart lock lever to lock Bleeper.
-          </p>
-        </div>
-      </div>
-      <div class="swiper-pagination" style="bottom:0"></div>
-    </div>
+    <%= image_tag('img/mobile/mobile_ride.png') %>
   </div>
 
   <!--meet-->
@@ -233,7 +164,8 @@
       <div class="rule_desc">
         <!--<h3>PARKING RULES</h3>-->
 
-        <%= image_tag('img/mobile/mobile_ride.png') %>
+        <%= image_tag('img/mobile/mobile_parking_steps.png') %>
+
       </div>
       <div class="rule_morality">
         <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the bad-->
@@ -301,4 +233,5 @@
 <%= javascript_include_tag 'custom/zepto.min.js', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'custom/swiper-3.3.1.jquery.min.js', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'custom/mobile_addedon_js.js' %>
+
 

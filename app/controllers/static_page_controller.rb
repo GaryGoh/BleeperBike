@@ -19,6 +19,8 @@ class StaticPageController < ApplicationController
 
   end
 
+  def navtest
+  end
 
 
 
