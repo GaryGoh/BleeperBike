@@ -1,33 +1,36 @@
-<!--header-nav-->
-<div class="navbar navbar-default navbar-fixed-top" id="mainNav">
-  <div class="container">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="col-sm-3">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bp-nav-trigger" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
       </button>
-      <a href="/">
-        <%= image_tag('img/web/logo_v3.png', height: '42') %>
+      <a class="navbar-brand page-scroll" href="/" style="margin-bottom: 1em;">
+            <%= image_tag('img/web/logo_v3.png', height: '30') %>
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="col-sm-9 collapse navbar-collapse" id="bp-nav-trigger">
-      <ul class="nav navbar-nav">
-        <li><a href="#top">Home</a></li>
-        <% unless (@news.nil?) %>
-            <li><a href="#bleepernews">Bleeper&nbspNews</a></li>
-        <% end %>
-        <li><a href="#works">Ride a Bleeper</a></li>
-        <li><a href="#rules">Parking Steps</a></li>
-        <li><a href="#price">Payment Options & Rewards</a></li>
-        <li><a href="mailto:sayhello@bleeperbike.com">Contact Us</a></li>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 0.5em">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="page-scroll" href="#top">Home</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#works">Ride a Bleeper</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#rules">Parking Steps</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#price">Payment Options & Rewards</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="mailto:sayhello@bleeperbike.com">Contact Us</a>
+        </li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-->
-</div>
+  <!-- /.container-fluid -->
+</nav>

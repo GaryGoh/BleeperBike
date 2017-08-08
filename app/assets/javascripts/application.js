@@ -13,7 +13,6 @@
 //= require jquery3
 //= require jquery_ujs
 //= require rails-ujs
-//= require twitter/bootstrap
 //= require underscore
 //= require gmaps/google
 //= require gmaps-auto-complete
