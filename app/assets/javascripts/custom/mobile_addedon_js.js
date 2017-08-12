@@ -76,7 +76,7 @@ window.onscroll = function () {
 //            console.log(scrollTop);
 //            console.log(deviceWidth);
     if (deviceWidth < 320) {
-        if (scrollTop >= 36) {
+        if (scrollTop >= 15) {
 //                    alert('ip5')
             $('.lineBox>li>p').show(100);
             $('.led_cover').show(700);
@@ -96,7 +96,7 @@ window.onscroll = function () {
         }
     }
     if (deviceWidth >= 320 && deviceWidth < 375) {
-        if (scrollTop >= 37) {
+        if (scrollTop >= 16) {
 //                    alert('ip5+++')
             $('.lineBox>li>p').show(100);
             $('.led_cover').show(700);
@@ -117,7 +117,7 @@ window.onscroll = function () {
         }
     }
     if (deviceWidth >= 375 && deviceWidth < 414) {
-        if (scrollTop >= 37) {
+        if (scrollTop >= 16) {
 //                    alert('ip6+++')
             $('.lineBox>li>p').show(100);
             $('.led_cover').show(700);
@@ -137,7 +137,7 @@ window.onscroll = function () {
         }
     }
     if (deviceWidth >= 414 && deviceWidth < 750) {
-        if (scrollTop >= 39) {
+        if (scrollTop >= 18) {
 //                    alert('ip7+++')
             $('.lineBox>li>p').show(100);
             $('.led_cover').show(700);
@@ -157,7 +157,7 @@ window.onscroll = function () {
         }
     }
     if (deviceWidth >= 750) {
-        if (scrollTop >= 43) {
+        if (scrollTop >= 22) {
 //                    alert('ip7+++')
             $('.lineBox>li>p').show(100);
             $('.led_cover').show(700);

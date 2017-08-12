@@ -172,24 +172,24 @@ body{
 }
 /*meet*/
 .meet{
-    margin-top: 2.13rem;
+    margin-bottom: 5.63rem;
 }
 .bleeper{
-    height: 9.33rem;
+    /*height: 9.33rem;*/
     background-color: #f5f3f3;
     padding: 1.06rem .53rem 0;
     text-align: center;
     position: relative;
 }
 .bleeper_mt h3{
-    font-size: .48rem;
-    color: #333;
+    /*font-size: .48rem;*/
+    /*color: #333;*/
 }
 .bleeper_mt p{
     font-size: .32rem;
     color: #909090;
-    padding-top: .53rem;
-    padding-bottom: 1.76rem;
+    /*padding-top: .53rem;*/
+    /*padding-bottom: 1.76rem;*/
 }
 /*.bleeper_bike{position:relative;}*/
 /*.lineBox{position:absolute}*/
@@ -252,7 +252,7 @@ body{
 }
 .seat{
     right: 2.82rem;
-    bottom: -1.93rem
+    bottom: -2.23rem
 }
 .seat .seat_cover{
     position: absolute;

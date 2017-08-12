@@ -78,19 +78,8 @@
     <!--</div>-->
   </div>
   <!--loop-->
-  <div id="bleepernews" style="padding-top: 0.4em;"></div>
+  <!--<div id="bleepernews" style="padding-top: 0.4em;"></div>-->
   <!--</br>-->
-  <!-- Bleeper news-->
-  <% unless (@news.nil?) %>
-      <%=
-          render 'static_page/sub_section/bleeper_news'
-      %>
-  <% end %>
-
-  <div class="banner" id="works" align="center">
-    <h3>RIDE A BLEEPER</h3>
-    <%= image_tag('img/mobile/mobile_ride.png') %>
-  </div>
 
   <!--meet-->
   <div class="meet">
@@ -105,59 +94,74 @@
           <%= image_tag('img/mobile/bike.png') %>
 
           <ul class="lineBox">
-            <li class="led">
-              <p>Built in LED light</p>
+          <li class="led">
+          <p>Built in LED light</p>
 
-              <div class="led_cover">
-                <div></div>
-                <div class="led_line cover"></div>
-              </div>
-            </li>
-            <li class="brake">
-              <p>Responsive brake</p>
+          <div class="led_cover">
+          <div></div>
+          <div class="led_line cover"></div>
+          </div>
+          </li>
+          <li class="brake">
+          <p>Responsive brake</p>
 
-              <div class="brake_cover">
-                <div></div>
-                <div class="brake_line cover"></div>
-              </div>
-            </li>
-            <li class="hub">
-              <p>Power generation hub</p>
+          <div class="brake_cover">
+          <div></div>
+          <div class="brake_line cover"></div>
+          </div>
+          </li>
+          <li class="hub">
+          <p>Power generation hub</p>
 
-              <div class="hub_cover">
-                <div></div>
-                <div class="hub_line cover"></div>
-              </div>
-            </li>
-            <li class="seat">
-              <p>Adjustable seat</p>
+          <div class="hub_cover">
+          <div></div>
+          <div class="hub_line cover"></div>
+          </div>
+          </li>
+          <li class="seat">
+          <p>Adjustable seat</p>
 
-              <div class="seat_cover">
-                <div></div>
-                <div class="seat_line cover"></div>
-              </div>
-            </li>
-            <li class="gps">
-              <p>Smart lock with built in GPS</p>
+          <div class="seat_cover">
+          <div></div>
+          <div class="seat_line cover"></div>
+          </div>
+          </li>
+          <li class="gps">
+          <p>Smart lock with built in GPS</p>
 
-              <div class="gps_cover">
-                <div></div>
-                <div class="gps_line cover"></div>
-              </div>
-            </li>
-            <li class="built">
-              <p>Built in LED lights</p>
+          <div class="gps_cover">
+          <div></div>
+          <div class="gps_line cover"></div>
+          </div>
+          </li>
+          <li class="built">
+          <p>Built in LED lights</p>
 
-              <div class="built_cover">
-                <div></div>
-                <div class="built_line cover"></div>
-              </div>
-            </li>
+          <div class="built_cover">
+          <div></div>
+          <div class="built_line cover"></div>
+          </div>
+          </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Bleeper news-->
+  <% unless (@news.nil?) %>
+      <%=
+          render 'static_page/sub_section/bleeper_news'
+      %>
+  <% end %>
+
+  <div class="banner" id="works" align="center">
+    <h3>RIDE A BLEEPER</h3>
+    <%= image_tag('img/mobile/mobile_ride.png') %>
+  </div>
+
+
+
   <!--parking rules-->
   <div class="parkingRules" id="rules">
     <div class="parking_wrap">
