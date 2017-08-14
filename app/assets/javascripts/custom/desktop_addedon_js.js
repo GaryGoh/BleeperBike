@@ -13,7 +13,7 @@ $(document).ready(function () {
     window.onscroll = function () {
         var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 //            console.log(scrollTop);
-        if (scrollTop >= 1650) {
+        if (scrollTop >= 850) {
             $('.lineBox>li>p').show(100);
             $('.led_cover').show(700);
             $('.brake_cover').show(700);

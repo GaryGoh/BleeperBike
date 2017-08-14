@@ -13,6 +13,7 @@
   <%= stylesheet_link_tag 'creative/bootstrap.css' %>
   <%= stylesheet_link_tag 'creative/magnific-popup.css' %>
   <%= stylesheet_link_tag 'creative/creative.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'custom/reset.js', 'data-turbolinks-track' => true %>
 
 
   <style>
@@ -69,12 +70,7 @@
   <% end %>
 
   <!-- How it works-->
-  <div id="works"></div>
   <div class="main">
-    <!--phoneloop-->
-    <h3>RIDE A BLEEPER</h3>
-    <%= image_tag('img/web/des_ride_bleeperbike.png') %>
-
 
     <!--bleeperbike-->
     <div class="bleeper" id="meet">
@@ -140,6 +136,11 @@
       </div>
     </div>
 
+    <!--How it works-->
+    <div style="padding-top: 25em;" id="works">
+      <h3>HOW IT WORKS</h3>
+      <%= image_tag('img/web/des_ride_bleeperbike.png') %>
+    </div>
 
     <!--parking_rules-->
     <div id="rules"></div>
@@ -219,20 +220,14 @@
 
 
 
-
-<%= javascript_include_tag 'creative/jquery.js'%>
+<%= javascript_include_tag 'creative/jquery.js' %>
 
 <!-- Latest compiled and minified JavaScript -->
-<%= javascript_include_tag 'creative/bootstrap.js'%>
-<!-- <script src="vendor/tether/tether.min.js"></script> -->
+<%= javascript_include_tag 'creative/bootstrap.js' %>
 
 <!-- Plugin JavaScript -->
-<%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'%>
-<%= javascript_include_tag 'creative/jquery.magnific-popup.js'%>
-<%= javascript_include_tag 'creative/creative.js'%>
+<%= javascript_include_tag 'creative/creative.js' %>
 
-<%= javascript_include_tag 'custom/scrollreveal.min.js' %>
-<%= javascript_include_tag 'custom/slide.js', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'custom/desktop_addedon_js.js' %>
 
 </body>

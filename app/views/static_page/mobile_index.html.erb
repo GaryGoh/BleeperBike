@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag 'custom/app.css', media: 'all', 'data-turbolinks-track' => true %>
 <%= stylesheet_link_tag 'custom/swiper-3.3.1.min.css', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'custom/reset.js', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
 <div id="container">
   <!--header-nav-->
@@ -31,7 +31,8 @@
           <% unless (@news.nil?) %>
               <li><a href="#bleepernews">Bleeper&nbspNews</a></li>
           <% end %>
-          <li><a href="#works">Ride a Bleeper</a></li>
+          <li><a href="#meet">Meet Bleeper</a></li>
+          <li><a href="#works">How It Works</a></li>
           <li><a href="#rules">Parking Steps</a></li>
           <li><a href="#price">Payment Options & Rewards</a></li>
           <li><a href="mailto:sayhello@bleeperbike.com">Contact Us</a></li>
@@ -51,11 +52,9 @@
     <!-- /.container-->
   </div>
 
+  <div>
 
-  <div class="">
-    <!--<div style="padding-top: 50px;">-->
     <%= image_tag('img/mobile/mobile.png') %>
-    <!--</div>-->
 
     <div class="circle header_bg col-md-12">
       <% if ios? %>
@@ -72,14 +71,7 @@
           </div>
       <% end %>
     </div>
-
-    <!--<div class="circle sr-slogan">-->
-    <!--<p>App Powered<br>Bike Sharing</p>-->
-    <!--</div>-->
   </div>
-  <!--loop-->
-  <!--<div id="bleepernews" style="padding-top: 0.4em;"></div>-->
-  <!--</br>-->
 
   <!--meet-->
   <div class="meet">
@@ -94,54 +86,54 @@
           <%= image_tag('img/mobile/bike.png') %>
 
           <ul class="lineBox">
-          <li class="led">
-          <p>Built in LED light</p>
+            <li class="led">
+              <p>Built in LED light</p>
 
-          <div class="led_cover">
-          <div></div>
-          <div class="led_line cover"></div>
-          </div>
-          </li>
-          <li class="brake">
-          <p>Responsive brake</p>
+              <div class="led_cover">
+                <div></div>
+                <div class="led_line cover"></div>
+              </div>
+            </li>
+            <li class="brake">
+              <p>Responsive brake</p>
 
-          <div class="brake_cover">
-          <div></div>
-          <div class="brake_line cover"></div>
-          </div>
-          </li>
-          <li class="hub">
-          <p>Power generation hub</p>
+              <div class="brake_cover">
+                <div></div>
+                <div class="brake_line cover"></div>
+              </div>
+            </li>
+            <li class="hub">
+              <p>Power generation hub</p>
 
-          <div class="hub_cover">
-          <div></div>
-          <div class="hub_line cover"></div>
-          </div>
-          </li>
-          <li class="seat">
-          <p>Adjustable seat</p>
+              <div class="hub_cover">
+                <div></div>
+                <div class="hub_line cover"></div>
+              </div>
+            </li>
+            <li class="seat">
+              <p>Adjustable seat</p>
 
-          <div class="seat_cover">
-          <div></div>
-          <div class="seat_line cover"></div>
-          </div>
-          </li>
-          <li class="gps">
-          <p>Smart lock with built in GPS</p>
+              <div class="seat_cover">
+                <div></div>
+                <div class="seat_line cover"></div>
+              </div>
+            </li>
+            <li class="gps">
+              <p>Smart lock with built in GPS</p>
 
-          <div class="gps_cover">
-          <div></div>
-          <div class="gps_line cover"></div>
-          </div>
-          </li>
-          <li class="built">
-          <p>Built in LED lights</p>
+              <div class="gps_cover">
+                <div></div>
+                <div class="gps_line cover"></div>
+              </div>
+            </li>
+            <li class="built">
+              <p>Built in LED lights</p>
 
-          <div class="built_cover">
-          <div></div>
-          <div class="built_line cover"></div>
-          </div>
-          </li>
+              <div class="built_cover">
+                <div></div>
+                <div class="built_line cover"></div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -156,10 +148,9 @@
   <% end %>
 
   <div class="banner" id="works" align="center">
-    <h3>RIDE A BLEEPER</h3>
+    <h3 style="padding-top: 2em;">HOW IT WORKS</h3>
     <%= image_tag('img/mobile/mobile_ride.png') %>
   </div>
-
 
 
   <!--parking rules-->
@@ -232,7 +223,7 @@
 <%= render 'static_page/modal/faq' %>
 
 <%= javascript_include_tag 'creative/jquery.js', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'creative/bootstrap.js'%>
+<%= javascript_include_tag 'creative/bootstrap.js' %>
 
 <%= javascript_include_tag 'custom/slide.js', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'custom/zepto.min.js', 'data-turbolinks-track' => true %>

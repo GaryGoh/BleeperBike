@@ -29,9 +29,9 @@ body{
     background-size: cover;
 }
 .logo{
-    background: url("../img/web/logo_v3.png") no-repeat center;
-    width: 4.0rem;
-    height: .96rem;
+    background: url("../img/mobile/black_logo.png") no-repeat center;
+    width: 5.0rem;
+    height: .6rem;
     margin-left: 1.0rem;
     margin-top: .3rem;
     background-size: cover;
@@ -168,7 +168,7 @@ body{
 .banner_desc{
     overflow:hidden;
     margin-top: .65rem;
-    padding-bottom: .65rem;
+    /*padding-bottom: .65rem;*/
 }
 /*meet*/
 .meet{
@@ -300,7 +300,7 @@ body{
 }
 /*parkingrules*/
 .parkingRules{
-    margin-top: 7rem;
+    margin-top: 2rem;
     text-align: center;
     font-size: 0;
 }
