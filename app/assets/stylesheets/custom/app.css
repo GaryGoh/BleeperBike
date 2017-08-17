@@ -79,6 +79,11 @@ body{
     position: relative;
 	top: -1rem;
 }
+
+.header_background{
+    background-image: url("../img/mobile/mobile.png") no-repeat center;
+}
+
 .circle{
     width: 6.48rem;
     height: 2.5rem;

@@ -12,7 +12,7 @@
   <%= stylesheet_link_tag 'custom/style', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'creative/bootstrap.css' %>
   <%= stylesheet_link_tag 'creative/magnific-popup.css' %>
-  <%= stylesheet_link_tag 'creative/creative.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'creative/creative.css' %>
   <%= javascript_include_tag 'custom/reset.js', 'data-turbolinks-track' => true %>
 
 
@@ -31,188 +31,180 @@
 </head>
 
 <body id="page-top">
-<div id="container">
 
-  <%=
-      render 'static_page/sub_section/navbarDes'
-  %>
-  <!--top_background-img-->
-  <div class="header_bg" id="top">
-    <%= image_tag('img/web/web.png') %>
+<%=
+    render 'static_page/sub_section/navbarDes'
+%>
+<!--top_background-img-->
 
-    <div class="circle sr-slogan col-md-8">
-      <div class="col-md-3">
-        <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
-          <%= image_tag('img/web/app_store.png', height: '60') %>
-        </a>
-      </div>
-      <div class="col-md-3">
-        <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
-          <%= image_tag('img/web/google_play.png', height: '60') %>
-        </a>
-      </div>
+<header>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <h1 id="homeHeading">Your Favorite Source of Bleeper Bike</h1>
+      <hr>
+      <p>Start Bleeper Bike can help you build better life using the Bleeper! Just download your the app and start your
+        new life!</p>
+      <div href="" class="page-scroll">
+        <div class="sr-slogan col-md-12">
+          <div class="col-md-3 col-md-offset-3">
+            <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
+              <%= image_tag('img/web/app_store.png', height: '60') %>
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
+              <%= image_tag('img/web/google_play.png', height: '60') %>
+            </a>
+          </div>
+        </div>
+      </a>
     </div>
-
-    <!--<div class="circle sr-slogan">-->
-    <!--<p>App Powered<br>Bike Sharing</p>-->
-    <!--</div>-->
   </div>
+</header>
 
-  <div id="bleepernews"></div>
+<!-- How it works-->
+<div class="main">
 
-  <br><br><br><br>
+  <!--bleeperbike-->
+  <div class="bleeper" id="meet">
+    <div class="bleeper_box">
+      <div class="bleeper_mt">
+        <h3>MEET BLEEPER</h3>
 
-  <!-- Bleeper news-->
-  <% unless (@news.nil?) %>
-      <%=
-          render 'static_page/sub_section/bleeper_news'
-      %>
-  <% end %>
-
-  <!-- How it works-->
-  <div class="main">
-
-    <!--bleeperbike-->
-    <div class="bleeper" id="meet">
-      <div class="bleeper_box">
-        <div class="bleeper_mt">
-          <h3>MEET BLEEPER</h3>
-
-          <p>BleeperBike is comfortable and fun to ride</p>
-        </div>
-        <div class="bleeper_bike">
-          <%= image_tag('img/web/bike.png') %>
-          <ul class="lineBox">
-            <li class="led">
-              <p>Built in LED light</p>
-
-              <div class="led_cover">
-                <div></div>
-                <div class="led_line cover"></div>
-              </div>
-            </li>
-            <li class="brake">
-              <p>Responsive brake</p>
-
-              <div class="brake_cover">
-                <div></div>
-                <div class="brake_line cover"></div>
-              </div>
-            </li>
-            <li class="hub">
-              <p>Power generation hub</p>
-
-              <div class="hub_cover">
-                <div></div>
-                <div class="hub_line cover"></div>
-              </div>
-            </li>
-            <li class="seat">
-              <p>Adjustable seat</p>
-
-              <div class="seat_cover">
-                <div></div>
-                <div class="seat_line cover"></div>
-              </div>
-            </li>
-            <li class="gps">
-              <p>Smart lock with built in GPS</p>
-
-              <div class="gps_cover">
-                <div></div>
-                <div class="gps_line cover"></div>
-              </div>
-            </li>
-            <li class="built">
-              <p>Built in LED lights</p>
-
-              <div class="built_cover">
-                <div></div>
-                <div class="built_line cover"></div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <p>BleeperBike is comfortable and fun to ride</p>
       </div>
-    </div>
+      <div class="bleeper_bike">
+        <%= image_tag('img/web/bike.png') %>
+        <ul class="lineBox">
+          <li class="led">
+            <p>Built in LED light</p>
 
-    <!--How it works-->
-    <div style="padding-top: 25em;" id="works">
-      <h3>HOW IT WORKS</h3>
-      <%= image_tag('img/web/des_ride_bleeperbike.png') %>
-    </div>
-
-    <!--parking_rules-->
-    <div id="rules"></div>
-    <div class="parkingRules">
-      <div class="parking_wrap">
-        <div class="rule_desc">
-          <h3>PARKING STEPS</h3>
-          <%= image_tag('img/web/park1.png') %>
-        </div>
-        <div class="rule_morality">
-          <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the-->
-          <!--bad and the ugly!</p>-->
-        </div>
-        <div class="rule_img">
-          <%=
-              # image_tag('img/web/parking_rule_web.png')
-          %>
-        </div>
-
-      </div>
-    </div>
-    </br>
-    </br>
-    </br>
-    </br>
-    <!--price-->
-    <div id="price"></div>
-    <h3>PAYMENT OPTIONS & REWARDS</h3>
-    <%=
-        image_tag('img/web/payment2.png')
-    %>
-
-  </div>
-
-  <footer class="footer">
-    <div class="container footer_wrap">
-      <div>
-        <ul>
-          <li class="col-lg-4 col-md-12">
-            <strong>LEGAL</strong>
-            <a data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</a>
-            <a data-toggle="modal" data-target="#privacy">Privacy&nbspPolicy</a>
+            <div class="led_cover">
+              <div></div>
+              <div class="led_line cover"></div>
+            </div>
           </li>
-          <li class=" col-lg-4 col-md-12 paddingtop-bottom">
-            <strong>USEFUL&nbspLINKS</strong>
-            <a data-toggle="modal" data-target="#faq">FAQ</a>
+          <li class="brake">
+            <p>Responsive brake</p>
+
+            <div class="brake_cover">
+              <div></div>
+              <div class="brake_line cover"></div>
+            </div>
           </li>
-          <li class=" col-lg-4 col-md-12 paddingtop-bottom ">
-            <strong>APPS</strong>
-            <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download&nbspIOS&nbspapp</a>
-            <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">Download&nbspAndroid&nbspapp</a>
+          <li class="hub">
+            <p>Power generation hub</p>
+
+            <div class="hub_cover">
+              <div></div>
+              <div class="hub_line cover"></div>
+            </div>
+          </li>
+          <li class="seat">
+            <p>Adjustable seat</p>
+
+            <div class="seat_cover">
+              <div></div>
+              <div class="seat_line cover"></div>
+            </div>
+          </li>
+          <li class="gps">
+            <p>Smart lock with built in GPS</p>
+
+            <div class="gps_cover">
+              <div></div>
+              <div class="gps_line cover"></div>
+            </div>
+          </li>
+          <li class="built">
+            <p>Built in LED lights</p>
+
+            <div class="built_cover">
+              <div></div>
+              <div class="built_line cover"></div>
+            </div>
           </li>
         </ul>
       </div>
-      <div style="padding-bottom: 10%;">
-        <p style="bottom: 4em;" class="col-lg-12">
-          <a href="https://www.facebook.com/BleeperBike/" class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-          </a>
-          <a href="https://twitter.com/Dub_Bleeper" class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-          </a>
-        </p>
-
-        <p class="col-lg-12"><%= @copyright.context %>
-        </p>
-      </div>
     </div>
-  </footer>
+  </div>
+
+  <!--How it works-->
+  <div style="padding-top: 15em;" id="works">
+    <h3>HOW IT WORKS</h3>
+    <%= image_tag('img/web/des_ride_bleeperbike.png') %>
+  </div>
+
+  <!--parking_rules-->
+  <div id="rules"></div>
+  <div class="parkingRules">
+    <div class="parking_wrap">
+      <div class="rule_desc">
+        <h3>PARKING STEPS</h3>
+        <%= image_tag('img/web/park1.png') %>
+      </div>
+      <div class="rule_morality">
+        <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the-->
+        <!--bad and the ugly!</p>-->
+      </div>
+      <div class="rule_img">
+        <%=
+            # image_tag('img/web/parking_rule_web.png')
+        %>
+      </div>
+
+    </div>
+  </div>
+  </br>
+  </br>
+  </br>
+  </br>
+  <!--price-->
+  <div id="price"></div>
+  <h3>PAYMENT OPTIONS & REWARDS</h3>
+  <%=
+      image_tag('img/web/payment2.png')
+  %>
+
 </div>
+
+<footer class="footer">
+  <div class="container footer_wrap">
+    <div>
+      <ul>
+        <li class="col-lg-4 col-md-12">
+          <strong>LEGAL</strong>
+          <a data-toggle="modal" data-target="#termscond">Terms&nbsp&&nbspCondtions</a>
+          <a data-toggle="modal" data-target="#privacy">Privacy&nbspPolicy</a>
+        </li>
+        <li class=" col-lg-4 col-md-12 paddingtop-bottom">
+          <strong>USEFUL&nbspLINKS</strong>
+          <a data-toggle="modal" data-target="#faq">FAQ</a>
+        </li>
+        <li class=" col-lg-4 col-md-12 paddingtop-bottom ">
+          <strong>APPS</strong>
+          <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download&nbspIOS&nbspapp</a>
+          <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">Download&nbspAndroid&nbspapp</a>
+        </li>
+      </ul>
+    </div>
+    <div style="padding-bottom: 10%;">
+      <p style="bottom: 4em;" class="col-lg-12">
+        <a href="https://www.facebook.com/BleeperBike/" class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </a>
+        <a href="https://twitter.com/Dub_Bleeper" class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </a>
+      </p>
+
+      <p class="col-lg-12"><%= @copyright.context %>
+      </p>
+    </div>
+  </div>
+</footer>
 
 <%= render 'static_page/modal/privacy' %>
 <%= render 'static_page/modal/termsconditions' %>

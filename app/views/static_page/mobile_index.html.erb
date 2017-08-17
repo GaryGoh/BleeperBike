@@ -53,25 +53,31 @@
   </div>
 
   <div>
-
-    <%= image_tag('img/mobile/mobile.png') %>
-
-    <div class="circle header_bg col-md-12">
-      <% if ios? %>
-          <div class="col-md-3">
-            <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
-              <%= image_tag('img/web/app_store.png') %>
-            </a>
-          </div>
-      <% else %>
-          <div class="col-md-3">
-            <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
-              <%= image_tag('img/web/google_play.png') %>
-            </a>
-          </div>
-      <% end %>
-    </div>
   </div>
+
+  <header>
+    <div class="header-content">
+      <div class="header-content-inner">
+        <h1 id="homeHeading">Your Favorite Source of Bleeper Bike</h1>
+        <hr>
+        <p>Start Bleeper Bike can help you build better life using the Bleeper! Just download your the app and start your
+          new life!</p>
+          <% if ios? %>
+              <div class="col-md-3">
+                <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
+                  <%= image_tag('img/web/app_store.png', :crop => :scale, :width => 0.5 ) %>
+                </a>
+              </div>
+          <% else %>
+              <div class="col-md-3">
+                <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
+                  <%= image_tag('img/web/google_play.png') %>
+                </a>
+              </div>
+          <% end %>
+      </div>
+    </div>
+  </header>
 
   <!--meet-->
   <div class="meet">
