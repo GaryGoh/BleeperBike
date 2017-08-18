@@ -1,0 +1,36 @@
+<!-- Modal -->
+<div class="modal fade bs-modal-lg" id="news" tabindex="-1" role="dialog" aria-labelledby="news">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="faq">Bleeper News</h4>
+      </div>
+      <div class="modal-body">
+        <% @news.each do |new| %>
+            <div class="media">
+              <div class="container">
+                <h4 class="media-heading" style="margin-bottom: 1em;">
+                  <%= new.title %>
+                </h4>
+
+                <p>
+                  <%= new.content %>
+                </p>
+
+                <p style="font-size:  smaller; color: #818181">Posted by <%= new.author %>
+                  on <%= new.created_at.strftime('%B %d, %Y') %></p>
+              </div>
+              <% if new != @news.last %>
+                  <hr>
+              <% end %>
+            </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

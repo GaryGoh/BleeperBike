@@ -35,6 +35,9 @@
           <li><a href="#works">How It Works</a></li>
           <li><a href="#rules">Parking Steps</a></li>
           <li><a href="#price">Payment Options & Rewards</a></li>
+          <li>
+            <a class="page-scroll" href="" data-toggle="modal" data-target="#news">Bleeper News</a>
+          </li>
           <li><a href="mailto:sayhello@bleeperbike.com">Contact Us</a></li>
           <% if ios? %>
               <li><a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">Download</a>
@@ -59,7 +62,7 @@
     <div class="header-content">
       <div class="header-content-inner">
         <h1 id="homeHeading">Ireland's first dockless bike sharing service</h1>
-        <hr>
+        <hr class="hr_creative">
         <p>Start Bleeper Bike can help you build better life using the Bleeper! Just download your the app and start
           your
           new life!</p>
@@ -224,6 +227,8 @@
 <%= render 'static_page/modal/privacy' %>
 <%= render 'static_page/modal/termsconditions' %>
 <%= render 'static_page/modal/faq' %>
+<%= render 'static_page/modal/bleepernews' %>
+
 
 <%= javascript_include_tag 'creative/jquery.js', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'creative/bootstrap.js' %>
