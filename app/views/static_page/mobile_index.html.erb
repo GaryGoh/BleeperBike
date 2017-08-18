@@ -58,23 +58,24 @@
   <header>
     <div class="header-content">
       <div class="header-content-inner">
-        <h1 id="homeHeading">Your Favorite Source of Bleeper Bike</h1>
+        <h1 id="homeHeading">Ireland's first dockless bike sharing service</h1>
         <hr>
-        <p>Start Bleeper Bike can help you build better life using the Bleeper! Just download your the app and start your
+        <p>Start Bleeper Bike can help you build better life using the Bleeper! Just download your the app and start
+          your
           new life!</p>
-          <% if ios? %>
-              <div class="col-md-3">
-                <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
-                  <%= image_tag('img/web/app_store.png', :crop => :scale, :width => 0.5 ) %>
-                </a>
-              </div>
-          <% else %>
-              <div class="col-md-3">
-                <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
-                  <%= image_tag('img/web/google_play.png') %>
-                </a>
-              </div>
-          <% end %>
+        <% if ios? %>
+            <div class="col-md-3">
+              <a href="https://itunes.apple.com/us/app/bleeperbike/id1226369951?l=zh&ls=1&mt=8">
+                <%= image_tag('img/web/app_store.png') %>
+              </a>
+            </div>
+        <% else %>
+            <div class="col-md-3">
+              <a href="https://play.google.com/store/apps/details?id=com.gesila.bleeperbike">
+                <%= image_tag('img/web/google_play.png') %>
+              </a>
+            </div>
+        <% end %>
       </div>
     </div>
   </header>
@@ -146,51 +147,47 @@
     </div>
   </div>
 
-  <!-- Bleeper news-->
-  <% unless (@news.nil?) %>
-      <%=
-          render 'static_page/sub_section/bleeper_news'
-      %>
-  <% end %>
 
-  <div class="banner" id="works" align="center">
-    <h3 style="padding-top: 2em;">HOW IT WORKS</h3>
-    <%= image_tag('img/mobile/mobile_ride.png') %>
-  </div>
-
-
-  <!--parking rules-->
-  <div class="parkingRules" id="rules">
-    <div class="parking_wrap">
-      <div class="rule_desc">
-        <h3>PARKING STEPS</h3>
-        <%= image_tag('img/mobile/mobile_parking_steps.png') %>
-      </div>
-      <div class="rule_morality">
-        <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the bad-->
-        <!--and the ugly!</p>-->
-      </div>
-      <div class="rule_img">
-        <%=
-            # image_tag('img/mobile/parking_rules_mobile.png')
-        %>
-      </div>
+  <div class="container">
+    <div class="banner" id="works" align="center">
+      <h3 style="padding-top: 2em;">HOW IT WORKS</h3>
+      <%= image_tag('img/mobile/mobile_ride.png') %>
     </div>
-    <!--<div class="rule_design">-->
-    <!--<img src="img/rule_design.png" alt="">-->
-    <!--</div>-->
-  </div>
 
 
-  <!--price-->
-  <div class="price" id="price">
-    <!--<div class="price_mtline">-->
-    <!--<img src="" alt="">-->
-    <!--</div>-->
-    <h3>PAYMENT OPTIONS <br>& <br>REWARDS</h3>
-    <%=
-        image_tag('img/mobile/mobile_payment.png')
-    %>
+    <!--parking rules-->
+    <div class="parkingRules" id="rules">
+      <div class="parking_wrap">
+        <div class="rule_desc">
+          <h3>PARKING STEPS</h3>
+          <%= image_tag('img/mobile/mobile_parking_steps.png') %>
+        </div>
+        <div class="rule_morality">
+          <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the bad-->
+          <!--and the ugly!</p>-->
+        </div>
+        <div class="rule_img">
+          <%=
+              # image_tag('img/mobile/parking_rules_mobile.png')
+          %>
+        </div>
+      </div>
+      <!--<div class="rule_design">-->
+      <!--<img src="img/rule_design.png" alt="">-->
+      <!--</div>-->
+    </div>
+
+
+    <!--price-->
+    <div class="price" id="price">
+      <!--<div class="price_mtline">-->
+      <!--<img src="" alt="">-->
+      <!--</div>-->
+      <h3>PAYMENT OPTIONS <br>& <br>REWARDS</h3>
+      <%=
+          image_tag('img/mobile/mobile_payment.png')
+      %>
+    </div>
   </div>
   <div class="footer">
     <div class="footer_wrap">

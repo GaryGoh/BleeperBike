@@ -40,10 +40,11 @@
 <header>
   <div class="header-content">
     <div class="header-content-inner">
-      <h1 id="homeHeading">Your Favorite Source of Bleeper Bike</h1>
+      <h1 id="homeHeading">Ireland's first dockless bike sharing service</h1>
       <hr>
       <p>Start Bleeper Bike can help you build better life using the Bleeper! Just download your the app and start your
         new life!</p>
+
       <div href="" class="page-scroll">
         <div class="sr-slogan col-md-12">
           <div class="col-md-3 col-md-offset-3">
@@ -57,7 +58,8 @@
             </a>
           </div>
         </div>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </header>
@@ -128,45 +130,41 @@
       </div>
     </div>
   </div>
+</div>
 
+<div class="container">
   <!--How it works-->
-  <div style="padding-top: 15em;" id="works">
+  <div style="margin-top: 15em;" id="works">
     <h3>HOW IT WORKS</h3>
-    <%= image_tag('img/web/des_ride_bleeperbike.png') %>
+
+    <div style="margin: 0 auto; margin-top: 3em;">
+      <%= image_tag('img/web/des_ride_bleeperbike.png', :class => 'col-md-10 col-md-offset-1') %>
+    </div>
   </div>
 
   <!--parking_rules-->
-  <div id="rules"></div>
-  <div class="parkingRules">
-    <div class="parking_wrap">
-      <div class="rule_desc">
-        <h3>PARKING STEPS</h3>
-        <%= image_tag('img/web/park1.png') %>
-      </div>
-      <div class="rule_morality">
-        <!--<p>It is essential that users respect our bike parking rules. See images below for examples of the good, the-->
-        <!--bad and the ugly!</p>-->
-      </div>
-      <div class="rule_img">
-        <%=
-            # image_tag('img/web/parking_rule_web.png')
-        %>
-      </div>
+  <div id="rules" style="margin: 0 auto; margin-top: 45em;">
+    <div>
+      <h3>PARKING STEPS</h3>
 
+      <div style="margin: 0 auto; margin-top: 3em;">
+        <%= image_tag('img/web/park1.png', :class => 'col-md-10 col-md-offset-1') %>
+      </div>
     </div>
   </div>
-  </br>
-  </br>
-  </br>
-  </br>
-  <!--price-->
-  <div id="price"></div>
-  <h3>PAYMENT OPTIONS & REWARDS</h3>
-  <%=
-      image_tag('img/web/payment2.png')
-  %>
 
+  <!--price-->
+  <div id="price" style="margin: 0 auto; margin-top: 50em;">
+    <h3>PAYMENT OPTIONS & REWARDS</h3>
+
+    <div>
+      <%=
+          image_tag('img/web/payment2.png', :class => 'col-md-10 col-md-offset-1')
+      %>
+    </div>
+  </div>
 </div>
+
 
 <footer class="footer">
   <div class="container footer_wrap">
