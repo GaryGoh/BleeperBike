@@ -468,7 +468,7 @@ body{
 }
 .footer{
     background-color: #1b212b;
-    height: 6.9rem;
+    height: 9.0rem;
     margin-top: 1.333rem;
     padding-top: .4rem;
     position: relative;
@@ -515,7 +515,7 @@ body{
     display: block;
     position: relative;
     width: 100%;
-    top: 3.23rem;
+    top: 2.23rem;
     text-align: center;
     left: 0;
 }
