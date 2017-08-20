@@ -190,10 +190,27 @@ header {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    background-image: url(<%= asset_path 'img/web/web.png' %>);
+    background-image: url(<%= asset_path 'img/web/web2.png' %>);
     text-align: center;
     color: white;
 }
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+        background-image: url(<%= asset_path 'img/mobile/nmobile.png' %>);
+        text-align: center;
+        color: white;
+    }
+}
+
 
 header .header-content {
     position: relative;
