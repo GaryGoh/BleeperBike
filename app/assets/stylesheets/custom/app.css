@@ -100,7 +100,7 @@ body{
 }
 /*banner*/
 .banner{
-    padding: 0 .53rem;
+    /*padding: 0 .53rem;*/
 }
 .banner_title{
     text-align: center;

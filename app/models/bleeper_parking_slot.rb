@@ -1,5 +1,5 @@
 class BleeperParkingSlot < ApplicationRecord
-  geocoded_by :address # can also be an IP address
+  geocoded_by :address, :latitude  => :latitude, :longitude => :longitude # can also be an IP address
   after_validation :geocode # auto-fetch coordinates
 
   reverse_geocoded_by :latitude, :longitude
