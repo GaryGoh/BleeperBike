@@ -209,7 +209,7 @@ body{
 }
 .led{
     left: 1.94rem;
-    bottom: -1.93rem;
+    bottom: -2.63rem;
 }
 .led .led_cover{
     position: absolute;
@@ -225,7 +225,7 @@ body{
 }
 .brake{
     left: 1.42rem;
-    bottom: -3.26rem;
+    bottom: -4.0rem;
 }
 .brake .brake_cover{
     position: absolute;
@@ -240,7 +240,7 @@ body{
     background-size: cover;
 }
 .hub{
-    bottom: -4.6rem;
+    bottom: -5.0rem;
     left: .56rem;
 }
 .hub .hub_cover{
@@ -272,8 +272,8 @@ body{
     background-size: cover;
 }
 .gps{
-    right: 1.34rem;
-    bottom: -3.26rem;
+    right: 1.0rem;
+    bottom: -3.78rem;
 }
 .gps .gps_cover{
     position: absolute;
@@ -288,8 +288,8 @@ body{
     background-size: cover;
 }
 .built{
-    right: .74rem;
-    bottom: -4.6rem;
+    right: .54rem;
+    bottom: -5.0rem;
 }
 .built .built_cover{
     position: absolute;
