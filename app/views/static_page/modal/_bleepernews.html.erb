@@ -5,28 +5,12 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="faq">Bleeper News</h4>
+        <h4 class="modal-title" id="faq">Bleeper Zones</h4>
       </div>
       <div class="modal-body">
-        <% @news.each do |new| %>
-            <div class="media">
-              <div class="container">
-                <h4 class="media-heading" style="margin-bottom: 1em;">
-                  <%= new.title %>
-                </h4>
-
-                <p>
-                  <%= new.content %>
-                </p>
-
-                <p style="font-size:  smaller; color: #818181">Posted by <%= new.author %>
-                  on <%= new.created_at.strftime('%B %d, %Y') %></p>
-              </div>
-              <% if new != @news.last %>
-                  <hr>
-              <% end %>
-            </div>
-        <% end %>
+        <div class="thumbnail">
+          <%= image_tag('img/web/region.jpeg', :width => '320') %>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
